@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Rental Phones — Jabalpur Rent</title>
+  <meta name="description" content="Browse all available iPhones, Galaxy Ultra, and OnePlus devices for rent in Jabalpur. Filter by Sadar, Russell Chowk, Gorakhpur, and Wright Town.">
+  
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/utilities.css">
+</head>
+<body>
+
+  <!-- Top Demo Role Switcher -->
+  <aside class="demo-role-bar">
+    <div style="display: flex; align-items: center; gap: 0.6rem;">
+      <span class="badge badge-grade-a">PROTOTYPE PHASE 2</span>
+      <span style="color: var(--text-muted); font-size: 0.8rem;">Switch Portal View:</span>
+    </div>
+    <nav class="demo-role-pill-group">
+      <a href="../../index.html" class="demo-role-pill active">📱 Customer App</a>
+      <a href="../shop/dashboard.html" class="demo-role-pill">🏪 Shop Partner Portal</a>
+      <a href="../admin/dashboard.html" class="demo-role-pill">🛡️ Platform Admin</a>
+    </nav>
+  </aside>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="../../index.html" class="brand-logo">
+        <span>⚡</span>
+        <div>JABALPUR<span class="accent">RENT</span></div>
+      </a>
+      <nav class="nav-links">
+        <a href="../../index.html" class="nav-link">Home</a>
+        <a href="./catalog.html" class="nav-link active">Phone Catalog</a>
+        <a href="./bookings.html" class="nav-link">My Bookings</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="./bookings.html" class="btn btn-primary btn-sm">Pickup OTP Pass</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="py-8">
+    <div class="container">
+      
+      <div style="margin-bottom: 2rem;">
+        <h2>Explore Available Smartphones</h2>
+        <p>Real display and demo smartphones verified by local Jabalpur electronics retailers.</p>
+      </div>
+
+      <!-- Filter Controls Bar -->
+      <div class="filter-bar">
+        <div class="filter-chips" id="brand-chips">
+          <button class="filter-chip active" data-brand="ALL">All Brands</button>
+          <button class="filter-chip" data-brand="Apple">Apple iPhone</button>
+          <button class="filter-chip" data-brand="Samsung">Samsung Galaxy</button>
+          <button class="filter-chip" data-brand="Google">Google Pixel</button>
+          <button class="filter-chip" data-brand="OnePlus">OnePlus</button>
+        </div>
+
+        <div class="search-input-box">
+          <span>🔍</span>
+          <input type="text" id="search-input" placeholder="Search iPhone, Ultra, 5G...">
+        </div>
+      </div>
+
+      <!-- Locality Sub-Filter -->
+      <div class="flex items-center gap-2 mb-6 flex-wrap">
+        <span class="text-xs text-muted font-bold">JABALPUR LOCALITY:</span>
+        <button class="filter-chip active" data-loc="ALL" onclick="filterLocality('ALL')">All Locations</button>
+        <button class="filter-chip" data-loc="Sadar" onclick="filterLocality('Sadar')">Sadar Bazar</button>
+        <button class="filter-chip" data-loc="Russell" onclick="filterLocality('Russell')">Russell Chowk</button>
+        <button class="filter-chip" data-loc="Gorakhpur" onclick="filterLocality('Gorakhpur')">Gorakhpur</button>
+        <button class="filter-chip" data-loc="Wright" onclick="filterLocality('Wright')">Wright Town</button>
+      </div>
+
+      <!-- Phone Grid -->
+      <div class="grid grid-cols-3" id="catalog-grid">
+        <!-- Rendered via JS -->
+      </div>
+
+    </div>
+  </main>
+
+  <script type="module">
+    import { MOCK_PHONES } from '../js/mock-data.js';
+    import { formatINR, showToast } from '../js/utils.js';
+
+    let currentBrand = 'ALL';
+    let currentLoc = 'ALL';
+    let searchTerm = '';
+
+    function render() {
+      const container = document.getElementById('catalog-grid');
+      const filtered = MOCK_PHONES.filter(phone => {
+        const matchBrand = currentBrand === 'ALL' || phone.brand === currentBrand;
+        const matchLoc = currentLoc === 'ALL' || phone.shop_name.includes(currentLoc);
+        const matchSearch = searchTerm === '' || 
+          `${phone.brand} ${phone.model} ${phone.camera_highlight}`.toLowerCase().includes(searchTerm.toLowerCase());
+        return matchBrand && matchLoc && matchSearch;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div style="grid-column: 1 / -1; text-align: center; padding: 3rem; background: var(--bg-surface); border-radius: var(--radius-lg);">
+            <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🔍</div>
+            <h4>No devices match your search query</h4>
+            <p class="text-sm text-muted mt-1">Try resetting filters to All Brands or All Locations.</p>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = filtered.map(phone => `
+        <article class="phone-card" id="catalog-${phone.id}">
+          <div class="phone-card-image-box" style="background: ${phone.image_gradient};">
+            <span class="badge badge-${phone.badge_color} phone-card-tag">${phone.tag}</span>
+            <span class="badge badge-battery phone-card-battery">🔋 ${phone.battery_health}% Health</span>
+            <div style="font-size: 4.8rem;" class="animate-float">${phone.device_icon}</div>
+          </div>
+          <div class="phone-card-body">
+            <h3 class="phone-card-title">${phone.brand} ${phone.model}</h3>
+            <div class="phone-card-shop">
+              <span>📍</span> <span>${phone.shop_name}</span>
+            </div>
+            
+            <div class="phone-card-specs">
+              <span class="badge badge-outline">${phone.storage}</span>
+              <span class="badge badge-outline">${phone.color}</span>
+              <span class="badge badge-grade-a">Grade A Mint</span>
+            </div>
+
+            <p class="text-xs text-muted mb-4" style="line-height: 1.4;">
+              ✨ ${phone.camera_highlight}
+            </p>
+
+            <div class="phone-card-footer">
+              <div class="phone-price-box">
+                <div class="phone-price-rate">
+                  ${formatINR(phone.daily_rate)} <small>/day</small>
+                </div>
+                <div class="phone-deposit-hint">
+                  ₹${phone.deposit_resident.toLocaleString()} Deposit (Resident)
+                </div>
+              </div>
+              <a href="./device.html?id=${phone.id}" class="btn btn-primary btn-sm">
+                Reserve &rarr;
+              </a>
+            </div>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    document.querySelectorAll('#brand-chips .filter-chip').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('#brand-chips .filter-chip').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentBrand = btn.dataset.brand;
+        render();
+      });
+    });
+
+    window.filterLocality = (loc) => {
+      document.querySelectorAll('[data-loc]').forEach(b => b.classList.remove('active'));
+      const active = document.querySelector(`[data-loc="${loc}"]`);
+      if (active) active.classList.add('active');
+      currentLoc = loc;
+      render();
+      showToast(`Filtered by ${loc === 'ALL' ? 'All Locations' : loc}`, 'info');
+    };
+
+    document.getElementById('search-input').addEventListener('input', (e) => {
+      searchTerm = e.target.value;
+      render();
+    });
+
+    render();
+  </script>
+</body>
+</html>

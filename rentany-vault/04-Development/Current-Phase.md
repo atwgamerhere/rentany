@@ -1,24 +1,20 @@
-# 📍 Jabalpur Rent — Current Phase: Phase 1
+# 📍 Jabalpur Rent — Current Phase: Phase 2
 
-> **Current Phase**: **PHASE 1 — Requirements, Architecture, Folder Structure, Database Design, Role-Permission Matrix & Threat Model**  
-> **Status**: 🟡 **Work Completed — Waiting for Founder Review & Approval**
+> **Current Phase**: **PHASE 2 — Frontend Prototype with Fictional Data and Responsive HTML/CSS/JavaScript**  
+> **Status**: 🟡 **Active — Development in Progress**  
+> **Previous Phase**: Phase 1 (Completed & Founder Approved with Answers 1b, 2a, 3a, 4: 20% take-rate)
 
 ---
 
-## 1. Phase 1 Objectives & Progress
+## 1. Phase 2 Implementation Scope & Deliverables
 
-| Objective | Target | Status | Notes |
-| :--- | :--- | :---: | :--- |
-| Workspace Inspection & Monorepo Setup | Clean separation of docs & code | ✅ Complete | Created `rentany-vault/`, `frontend/`, `backend/`, `database/`, `tests/` |
-| Obsidian Knowledge Vault Setup | 10 core sections + indexes | ✅ Complete | Vault populated with internal links and structure |
-| Project Overview & Heartbeat | Vision, market context, unit economics | ✅ Complete | Documented in `PROJECT-OVERVIEW.md` & `PROJECT-STATUS.md` |
-| System Architecture & Data Flows | Modular TS backend + Vanilla frontend | ✅ Complete | Documented with Mermaid sequence and flow diagrams |
-| Relational Database Schema & ERD | PostgreSQL DDL with range exclusion | ✅ Complete | 10 normalized tables with audit logs and constraints |
-| User Roles & Permissions Matrix | RBAC for Customer, Shop, Admin | ✅ Complete | Enforced via PostgreSQL RLS and server guards |
-| Threat Model & Security Checklist | STRIDE analysis for device theft/fraud | ✅ Complete | Documented in `Threat-Model.md` & `Security-Checklist.md` |
-| Provider Research & Cost Estimates | Verifiable Indian fintech/cloud costs | ✅ Complete | Documented with real pricing for Supabase, Razorpay, Setu |
-| Master 7-Phase Plan & Acceptance Gates | Sequential phase-gating | ✅ Complete | Documented in `MASTER-PLAN.md` |
-| Initial Session Log | Detailed record of Session 01 | ✅ Complete | Documented in `2026-10-27-Session-01.md` |
+| Deliverable | Description | Status |
+| :--- | :--- | :---: |
+| **Vanilla CSS Design System** | Modern dark-mode palette, HSL tokens, glassmorphism, responsive grid, micro-animations | ✅ Complete |
+| **Customer Web Portal** | Landing page with Jabalpur location filters, catalog with specs, detail page with dynamic date & tiered deposit calculator, checkout with DigiLocker modal & simulated Razorpay, bookings dashboard with 6-digit Pickup OTP pass | ✅ Complete |
+| **Shop Partner Portal** | Shop dashboard with 80% payout summary, physical inventory management with condition grades (A/B/C) and status toggles, in-person pickup and return OTP validation screen | ✅ Complete |
+| **Admin Control Center** | Shop approval queue, customer KYC inspection, dispute arbitration, immutable audit log | ✅ Complete |
+| **Mock Dataset** | Realistic Jabalpur shops (*Russell Chowk, Sadar Bazar, Gorakhpur, Wright Town*) and flagship phones | ✅ Complete |
 
 ---
 

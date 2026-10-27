@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secure Checkout & Escrow Payment — Jabalpur Rent</title>
+  
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/utilities.css">
+</head>
+<body>
+
+  <!-- Top Demo Role Switcher -->
+  <aside class="demo-role-bar">
+    <div style="display: flex; align-items: center; gap: 0.6rem;">
+      <span class="badge badge-grade-a">PROTOTYPE PHASE 2</span>
+      <span style="color: var(--text-muted); font-size: 0.8rem;">Switch Portal View:</span>
+    </div>
+    <nav class="demo-role-pill-group">
+      <a href="../../index.html" class="demo-role-pill active">📱 Customer App</a>
+      <a href="../shop/dashboard.html" class="demo-role-pill">🏪 Shop Partner Portal</a>
+      <a href="../admin/dashboard.html" class="demo-role-pill">🛡️ Platform Admin</a>
+    </nav>
+  </aside>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="../../index.html" class="brand-logo">
+        <span>⚡</span>
+        <div>JABALPUR<span class="accent">RENT</span></div>
+      </a>
+      <div class="flex items-center gap-2">
+        <span class="badge badge-success">🔒 256-Bit SSL Encrypted</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="py-8">
+    <div class="container" style="max-width: 900px;">
+      
+      <div style="margin-bottom: 2rem;">
+        <h2>Complete Your Reservation</h2>
+        <p>Verify your digital KYC and authorize payment. Your deposit is held in secure escrow.</p>
+      </div>
+
+      <div class="grid grid-cols-3" style="gap: 2rem; align-items: flex-start;">
+        
+        <!-- Left: Checkout Steps (2 cols) -->
+        <div style="grid-column: span 2;">
+          
+          <!-- Step 1: DigiLocker KYC Verification -->
+          <div class="card card-static mb-4" style="border-left: 4px solid var(--brand-primary);">
+            <div class="flex justify-between items-center mb-2">
+              <h3 style="font-size: 1.15rem;">1. Customer Identity & DigiLocker KYC</h3>
+              <span class="badge badge-success">✓ TIER 1 VERIFIED</span>
+            </div>
+            <p class="text-xs text-muted mb-4">
+              Identity verified via Setu DigiLocker API. Masked Aadhaar tokenized in compliance with UIDAI regulations.
+            </p>
+            
+            <div style="background: var(--bg-surface); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; font-size: 0.875rem;">
+              <div>
+                <span class="text-muted block text-xs">Customer Legal Name:</span>
+                <span class="font-bold">Aditya Mishra</span>
+              </div>
+              <div>
+                <span class="text-muted block text-xs">Masked Aadhaar:</span>
+                <span class="font-mono font-bold">XXXX-XXXX-8921</span>
+              </div>
+              <div>
+                <span class="text-muted block text-xs">Verified Address:</span>
+                <span>Sadar Bazar, Jabalpur, MP 482001</span>
+              </div>
+              <div>
+                <span class="text-muted block text-xs">Contact Mobile:</span>
+                <span class="font-bold">+91 98261 49021</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2: In-Store Handover Agreement -->
+          <div class="card card-static mb-4">
+            <h3 style="font-size: 1.15rem; margin-bottom: 0.75rem;">2. Handover Protocol Acknowledgment</h3>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.875rem; color: var(--text-secondary);">
+              <li class="flex items-center gap-2">
+                <span class="text-brand font-bold">✓</span>
+                <span>You will receive a confidential 6-digit <strong>Pickup OTP</strong> after payment.</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-brand font-bold">✓</span>
+                <span>Visit the partner store in Jabalpur and present your Pickup OTP to receive the phone.</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-brand font-bold">✓</span>
+                <span>Upon return, sign out of Apple ID / Google Account; your deposit is instantly refunded.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Step 3: Payment Gateway Selector (Razorpay Sandbox) -->
+          <div class="card card-static" style="border-color: var(--border-focus);">
+            <div class="flex justify-between items-center mb-4">
+              <h3 style="font-size: 1.15rem;">3. Payment Method (Razorpay Gateway)</h3>
+              <span class="badge badge-info">SANDBOX TEST MODE</span>
+            </div>
+
+            <!-- Tab Buttons -->
+            <div class="flex gap-2 mb-4" id="payment-tabs">
+              <button class="filter-chip active" type="button" onclick="selectPayTab('upi')">UPI (GPay / PhonePe / Paytm)</button>
+              <button class="filter-chip" type="button" onclick="selectPayTab('card')">Debit / Credit Card</button>
+              <button class="filter-chip" type="button" onclick="selectPayTab('netbanking')">Netbanking</button>
+            </div>
+
+            <!-- Tab Content: UPI -->
+            <div id="tab-upi">
+              <div class="form-group">
+                <label class="form-label">Virtual Payment Address (UPI ID)</label>
+                <input type="text" class="form-control" id="input-vpa" value="aditya.mishra@okhdfcbank" placeholder="name@upi">
+              </div>
+              <div class="flex gap-2">
+                <button class="filter-chip" type="button" onclick="setUpi('aditya@oksbi')">Google Pay</button>
+                <button class="filter-chip" type="button" onclick="setUpi('aditya@ybl')">PhonePe</button>
+                <button class="filter-chip" type="button" onclick="setUpi('aditya@paytm')">Paytm</button>
+              </div>
+            </div>
+
+            <!-- Simulated Pay Button -->
+            <div class="mt-6">
+              <button class="btn btn-primary btn-block btn-lg" id="btn-pay-now" onclick="simulatePayment()">
+                Pay <span id="btn-pay-amount">₹6,780</span> via Razorpay &rarr;
+              </button>
+              <div class="text-center text-xs text-muted mt-2">
+                ⚡ Instant confirmation. Webhook HMAC-SHA256 signature simulated.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Order Summary Sidebar (1 col) -->
+        <div>
+          <div class="card card-static" style="position: sticky; top: calc(var(--navbar-height) + 1.5rem);">
+            <h4 style="margin-bottom: 1rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.5rem;">
+              Reservation Summary
+            </h4>
+
+            <div class="mb-4">
+              <div class="text-xs text-muted">Device:</div>
+              <div class="font-bold text-lg" id="summary-device-title">iPhone 15 Pro Max</div>
+              <div class="text-xs text-brand" id="summary-shop-title">Apex Mobile Gallery (Sadar)</div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.875rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 1rem; margin-bottom: 1rem;">
+              <div class="flex justify-between">
+                <span class="text-muted">Duration:</span>
+                <span class="font-bold" id="summary-days">3 Days</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-muted">Net Rental Fee:</span>
+                <span class="font-mono" id="summary-net-rent">₹3,780</span>
+              </div>
+              <div class="flex justify-between" style="color: var(--brand-primary);">
+                <span>Refundable Deposit:</span>
+                <span class="font-mono font-bold" id="summary-deposit">₹3,000</span>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center mb-4">
+              <div>
+                <span class="text-xs text-muted">Total Charged:</span>
+                <div class="font-bold text-xl text-primary font-mono" id="summary-total">₹6,780</div>
+              </div>
+              <span class="badge badge-success">Escrow Safe</span>
+            </div>
+
+            <div class="text-xs text-muted" style="line-height: 1.4; background: var(--bg-surface); padding: 0.75rem; border-radius: var(--radius-sm);">
+              💡 <strong>Deposit Guarantee</strong>: Upon returning the device to the store in clean condition, your ₹3,000 deposit is instantly released via Razorpay refund API.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <script type="module">
+    import { MOCK_PHONES, MOCK_SHOPS } from '../js/mock-data.js';
+    import { formatINR, calculateQuote, showToast } from '../js/utils.js';
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const phoneId = urlParams.get('id') || 'phone-ip15pm-01';
+    const days = parseInt(urlParams.get('days'), 10) || 3;
+    const isResident = urlParams.get('resident') !== '0';
+
+    const phone = MOCK_PHONES.find(p => p.id === phoneId) || MOCK_PHONES[0];
+    const shop = MOCK_SHOPS.find(s => s.id === phone.shop_id) || MOCK_SHOPS[0];
+
+    const quote = calculateQuote(phone.daily_rate, days, isResident);
+
+    // Populate Summary
+    document.getElementById('summary-device-title').innerText = `${phone.brand} ${phone.model}`;
+    document.getElementById('summary-shop-title').innerText = shop.name;
+    document.getElementById('summary-days').innerText = `${quote.days} Days`;
+    document.getElementById('summary-net-rent').innerText = formatINR(quote.netRentalFee);
+    document.getElementById('summary-deposit').innerText = formatINR(quote.depositAmount);
+    document.getElementById('summary-total').innerText = formatINR(quote.totalPayable);
+    document.getElementById('btn-pay-amount').innerText = formatINR(quote.totalPayable);
+
+    window.selectPayTab = (tab) => {
+      document.querySelectorAll('#payment-tabs .filter-chip').forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+      showToast(`Selected ${tab.toUpperCase()} payment mode`, 'info');
+    };
+
+    window.setUpi = (vpa) => {
+      document.getElementById('input-vpa').value = vpa;
+    };
+
+    window.simulatePayment = () => {
+      const btn = document.getElementById('btn-pay-now');
+      btn.disabled = true;
+      btn.innerHTML = `<span class="animate-pulse-glow">⏳ Authorizing with Razorpay Sandbox...</span>`;
+
+      setTimeout(() => {
+        btn.innerHTML = `✓ Payment Successful! Generating Pickup OTP...`;
+        btn.style.background = `var(--status-success)`;
+        showToast('Payment verified! Pickup OTP generated.', 'success');
+
+        setTimeout(() => {
+          window.location.href = './bookings.html?new_booking=1';
+        }, 1200);
+      }, 1500);
+    };
+  </script>
+</body>
+</html>

@@ -4,56 +4,31 @@
 
 ---
 
-## 1. Immediate Action (Phase 1 Closure)
+## 1. Immediate Action (Phase 2 Review)
 
-1. **Founder Review**:
-   - Present the complete Phase 1 documentation suite to the founder.
-   - Walk through the System Architecture ([[System-Architecture]]), Database Schema ([[Database-Schema]]), User Roles Matrix ([[User-Roles-and-Permissions]]), Threat Model ([[Threat-Model]]), and Open Business Decisions ([[Open-Questions]]).
-2. **Founder Decision Sign-Off**:
-   - Confirm preferred deposit pricing model and primary payment/KYC gateway direction.
-   - Grant explicit approval to begin Phase 2.
+1. **Founder Review of Phase 2 Prototype**:
+   - Preview all 3 interactive portals running live on `http://localhost:5510/index.html`:
+     - **Customer Portal**: [`index.html`](http://localhost:5510/index.html) & [`catalog.html`](http://localhost:5510/src/customer/catalog.html) & [`device.html`](http://localhost:5510/src/customer/device.html) & [`checkout.html`](http://localhost:5510/src/customer/checkout.html) & [`bookings.html`](http://localhost:5510/src/customer/bookings.html)
+     - **Shop Partner Portal**: [`dashboard.html`](http://localhost:5510/src/shop/dashboard.html) & [`inventory.html`](http://localhost:5510/src/shop/inventory.html) & [`handover.html`](http://localhost:5510/src/shop/handover.html)
+     - **Admin Control Center**: [`dashboard.html`](http://localhost:5510/src/admin/dashboard.html)
+2. **Founder Sign-off**: Confirm design aesthetics, usability, and dynamic pricing calculations.
 
 ---
 
-## 2. Queued Sequence for Phase 2 (Frontend Prototype)
+## 2. Queued Sequence for Phase 3 (Database, Auth, RLS & Storage)
 
-Once approval is received, Phase 2 will execute in this order:
+Upon receiving founder approval for Phase 2, Phase 3 will implement:
 
-### Step 1: Design System & Shared CSS
-- Create `frontend/src/css/variables.css` with:
-  - Curated HSL color palette (sleek dark mode base with vibrant emerald/teal accents for trust & escrow).
-  - Modern typography system importing Google Fonts (`Outfit` for headings, `Inter` for crisp readability).
-  - Elevation tokens, glassmorphism card surfaces, and border-radius scales.
-- Create `frontend/src/css/base.css` and `frontend/src/css/components.css` (cards, badges, modals, inputs, hero layouts, buttons).
-
-### Step 2: Customer Discovery & Catalog UI
-- Build `frontend/src/customer/index.html` with:
-  - Hero section showcasing Jabalpur phone rentals.
-  - Quick filter chips for local hubs (*Sadar*, *Russell Chowk*, *Gorakhpur*, *Wright Town*).
-  - Featured phone cards with daily rates, deposit badges, and specs.
-- Build `frontend/src/customer/catalog.html` with multi-facet filters (Brand, Price, Camera type).
-- Build `frontend/src/customer/device.html` with:
-  - Multi-angle gallery.
-  - Interactive date range selector.
-  - Real-time transparent price calculation (Rental Days x Daily Rate + Refundable Deposit).
-  - "Book Now" CTA.
-
-### Step 3: Checkout & Customer Dashboard UI
-- Build `frontend/src/customer/checkout.html`:
-  - Order summary breakdown.
-  - Mock DigiLocker KYC authorization trigger button.
-  - Simulated payment gateway checkout modal.
-- Build `frontend/src/customer/bookings.html`:
-  - Active booking cards displaying status timeline and the 6-digit **Pickup OTP** card.
-
-### Step 4: Shop Partner & Admin Portals
-- Build `frontend/src/shop/dashboard.html` & `frontend/src/shop/inventory.html` (device condition toggles, stock list).
-- Build `frontend/src/shop/handover.html` (Pickup OTP verification form, photo upload simulator, return inspection checklist).
-- Build `frontend/src/admin/dashboard.html` (shop approval queue, flagged KYC review).
-
-### Step 5: Verification & Review
-- Test responsive layout on mobile viewport (360px), tablet (768px), and desktop (1280px+).
-- Validate smooth micro-interactions and zero broken assets.
+1. **SQL Migrations**: Write sequential, reversible SQL files in `database/migrations/`:
+   - `001_extensions_and_enums.sql`
+   - `002_core_tables_and_constraints.sql`
+   - `003_exclusion_constraints_and_indexes.sql`
+   - `004_row_level_security_policies.sql`
+   - `005_storage_buckets_and_rules.sql`
+   - `006_audit_triggers.sql`
+   - `007_seed_initial_admin_and_jabalpur_shops.sql`
+2. **Supabase Auth Integration**: Set up phone OTP verification hooks and JWT session guards.
+3. **Automated Security Verification**: Write automated scripts in `tests/security/` testing RLS boundaries (verifying that non-admin users cannot alter roles and shopkeepers cannot query customer KYC).
 
 ---
 

@@ -15,6 +15,7 @@
 | [[#ADR-005]] | Two-Tier Inventory Model: Listing Templates vs Physical Devices | 2026-10-27 | 🟢 Accepted |
 | [[#ADR-006]] | DigiLocker OKYC & Masked Aadhaar Storage Strategy | 2026-10-27 | 🟢 Accepted |
 | [[#ADR-007]] | Upfront Charge + Automated Deposit Refund vs Card Pre-Auth Holds | 2026-10-27 | 🟢 Accepted |
+| [[#ADR-008]] | Business & Provider Parameters (20% Take-Rate, Tiered Deposits, Razorpay+Setu) | 2026-10-27 | 🟢 Accepted |
 
 ---
 
@@ -104,3 +105,17 @@
 - **Consequences**:
   - Positive: Works universally with UPI, debit cards, and netbanking; guarantees dispute leverage and customer commitment.
   - Negative: Payment gateway processing fee applies to deposit transaction (can be absorbed into platform fee or passed as nominal handling fee).
+
+---
+
+### ADR-008: Business & Provider Parameters (20% Take-Rate, Tiered Deposits, Razorpay + Setu)
+- **Date**: 2026-10-27
+- **Context**: Operational economics, dispute liability, deposit pricing, and vendor selection were presented to the founder in Phase 1 review.
+- **Decision**:
+  1. **Platform Take-Rate**: Fixed at 20% platform commission (Shop receives 80% payout).
+  2. **Security Deposits**: Tiered by verified residence (Tier 1 Jabalpur residents pay ₹3,000 for standard flagships; outstation/tourists pay ₹8,000 - ₹10,000).
+  3. **Damage Liability**: Authorized service center estimate deducted directly from the security deposit; remainder refunded.
+  4. **Primary Gateways**: Razorpay for Checkout & Instant Refunds API; Setu for DigiLocker OKYC consent flow.
+- **Consequences**:
+  - Positive: Increases gross margin per 3-day rental from ₹540 to ₹720 (+33% profitability); lowers local barrier to entry while protecting against outstation flight risk; unifies best-in-class developer APIs (Razorpay + Setu).
+  - Negative: Higher deposit on tourists may slightly reduce outstation bookings; shopkeeper payout model requires clean return sign-off.

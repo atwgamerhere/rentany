@@ -1,0 +1,75 @@
+/* ==============================================================================
+   JABALPUR RENT — DESIGN SYSTEM VARIABLES & TOKENS
+   Aesthetic: Ultra-premium dark theme with vivid emerald/teal escrow accents
+   ============================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Color Palette (Tailored HSL) */
+  --bg-primary: hsl(224, 45%, 6%);
+  --bg-secondary: hsl(222, 40%, 10%);
+  --bg-surface: hsl(220, 36%, 13%);
+  --bg-surface-elevated: hsl(218, 32%, 17%);
+  --bg-glass: hsla(220, 36%, 14%, 0.75);
+  --bg-glass-card: hsla(220, 32%, 16%, 0.65);
+  --bg-glass-hover: hsla(220, 32%, 22%, 0.8);
+
+  /* Borders & Dividers */
+  --border-subtle: hsla(220, 24%, 26%, 0.5);
+  --border-focus: hsla(160, 84%, 44%, 0.6);
+  --border-glass: hsla(220, 30%, 40%, 0.25);
+  --border-glow: hsla(160, 84%, 48%, 0.35);
+
+  /* Brand Accents (Trust Emerald & Tech Cyan) */
+  --brand-primary: hsl(160, 84%, 42%);
+  --brand-primary-hover: hsl(160, 84%, 48%);
+  --brand-primary-glow: hsla(160, 84%, 42%, 0.3);
+  --brand-cyan: hsl(175, 80%, 45%);
+  --brand-indigo: hsl(238, 87%, 67%);
+  --brand-purple: hsl(265, 85%, 65%);
+
+  /* Status Colors */
+  --status-success: hsl(152, 76%, 42%);
+  --status-success-bg: hsla(152, 76%, 42%, 0.15);
+  --status-warning: hsl(38, 92%, 50%);
+  --status-warning-bg: hsla(38, 92%, 50%, 0.15);
+  --status-danger: hsl(354, 85%, 54%);
+  --status-danger-bg: hsla(354, 85%, 54%, 0.15);
+  --status-info: hsl(205, 87%, 55%);
+  --status-info-bg: hsla(205, 87%, 55%, 0.15);
+
+  /* Typography */
+  --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Text Colors */
+  --text-primary: hsl(210, 40%, 98%);
+  --text-secondary: hsl(215, 20%, 75%);
+  --text-muted: hsl(217, 16%, 54%);
+  --text-brand: hsl(160, 84%, 45%);
+  --text-on-brand: hsl(224, 45%, 6%);
+
+  /* Elevation & Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 24px -4px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 16px 40px -8px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 0 30px -5px hsla(160, 84%, 44%, 0.25);
+  --shadow-glow-cyan: 0 0 30px -5px hsla(175, 80%, 45%, 0.25);
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 9999px;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 400ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Layout */
+  --container-max: 1240px;
+  --navbar-height: 72px;
+}

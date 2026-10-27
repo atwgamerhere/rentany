@@ -10,6 +10,7 @@ Welcome to the central knowledge repository for **RENTANY** (`rentany.in`), the 
 
 | Document | Purpose | Status |
 | :--- | :--- | :--- |
+| [[FILE-AUDIT-SEQUENCE]] | 📑 Master File Creation & Flow Sequence (Audit First) | 🔍 Audit Master |
 | [[READING-ORDER-GUIDE]] | 📖 Chronological Reading Order & Audit Sequence Guide | ⭐ Start Here |
 | [[PROJECT-STATUS]] | Real-time project heartbeat, blockers & current state | 🟢 Active |
 | [[PROJECT-OVERVIEW]] | Core vision, business model, customer & shop persona | 📘 Reference |

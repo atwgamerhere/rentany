@@ -6,7 +6,7 @@
      - Deep Espresso:    #3D250B  (hsl(31, 69%, 14%))
    ============================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
 :root {
   /* Official Brand Core Colors */
@@ -14,14 +14,18 @@
   --color-gold: #EDC79B;
   --color-espresso: #3D250B;
 
+  /* Natural Botanical Midtones (from brand assets) */
+  --color-bronze: #836138;
+  --color-earth-mocha: #5A4337;
+
   /* Backgrounds & Surfaces (Espresso Hierarchy) */
   --bg-primary: hsl(30, 48%, 6%);             /* Deepest roasted obsidian espresso */
   --bg-secondary: hsl(31, 55%, 9%);           /* Midnight mocha */
   --bg-surface: #3D250B;                      /* Core Deep Espresso */
   --bg-surface-elevated: hsl(31, 45%, 19%);   /* Elevated mocha card */
-  --bg-glass: hsla(31, 55%, 9%, 0.85);        /* Frosted espresso backdrop */
-  --bg-glass-card: hsla(31, 60%, 13%, 0.75);  /* Glassmorphism surface */
-  --bg-glass-hover: hsla(31, 50%, 21%, 0.85); /* Hover state */
+  --bg-glass: hsla(31, 55%, 9%, 0.88);        /* Frosted espresso backdrop */
+  --bg-glass-card: hsla(31, 60%, 13%, 0.78);  /* Glassmorphism surface */
+  --bg-glass-hover: hsla(31, 50%, 21%, 0.88); /* Hover state */
 
   /* Borders & Dividers */
   --border-subtle: hsla(32, 40%, 30%, 0.45);
@@ -50,8 +54,15 @@
   --status-info-bg: hsla(205, 85%, 60%, 0.15);
 
   /* Typography */
+  --font-serif: 'Cinzel', Georgia, serif;
   --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Natural Luxury Gradients */
+  --grad-royal-crimson: linear-gradient(135deg, #B21F3A 0%, #87162A 100%);
+  --grad-champagne-gold: linear-gradient(135deg, #FFF6EC 0%, #EDC79B 60%, #C89961 100%);
+  --grad-espresso: linear-gradient(135deg, #3D250B 0%, #201305 100%);
+  --grad-botanical-bronze: linear-gradient(135deg, #836138 0%, #5A4337 100%);
 
   /* Text Colors (Ivory & Warm Sand) */
   --text-primary: #FDF9F5;                    /* Warm ivory white */

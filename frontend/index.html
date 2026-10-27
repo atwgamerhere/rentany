@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RENTANY — Mobile Phone Rental Marketplace | Jabalpur, MP</title>
-  <meta name="description" content="RENTANY enables you to rent flagship smartphones (iPhone 15 Pro, Galaxy S24 Ultra, OnePlus) from verified retail shops in Jabalpur, MP. Instant DigiLocker KYC & 100% escrow-backed deposits.">
+  <meta name="description" content="RENTANY enables you to rent flagship smartphones (iPhone 15 Pro Max, Galaxy S24 Ultra, OnePlus 12) from verified retail shops in Jabalpur, MP. Instant DigiLocker KYC & 100% escrow-backed deposits.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./assets/fl.png">
   
   <!-- CSS Design System -->
   <link rel="stylesheet" href="./src/css/variables.css">
@@ -17,7 +20,9 @@
   <!-- Top Demo Role Switcher -->
   <aside class="demo-role-bar" aria-label="Demo Role Switcher">
     <div style="display: flex; align-items: center; gap: 0.6rem;">
-      <span class="badge badge-grade-a">RENTANY PHASE 2</span>
+      <span class="badge badge-gold" style="font-size: 0.72rem; padding: 0.2rem 0.6rem;">
+        <img src="./assets/fl.png" style="height: 12px; width: auto; margin-right: 0.3rem;" alt=""> RENTANY PHASE 2
+      </span>
       <span style="color: var(--text-muted); font-size: 0.8rem;">Switch Portal View:</span>
     </div>
     <nav class="demo-role-pill-group" aria-label="Portal Navigation">
@@ -31,7 +36,7 @@
   <header class="navbar">
     <div class="container nav-container">
       <a href="./index.html" class="brand-logo" id="logo-link">
-        <span style="font-size: 1.6rem; color: var(--brand-primary);">⚡</span>
+        <img src="./assets/fl.png" class="brand-crest" alt="RENTANY Royal Lotus Crest">
         <div>RENT<span class="accent">ANY</span></div>
         <span class="brand-badge">MP-20 JABALPUR</span>
       </a>
@@ -39,6 +44,7 @@
       <nav class="nav-links">
         <a href="./index.html" class="nav-link active" id="nav-link-explore">Explore Phones</a>
         <a href="./src/customer/catalog.html" class="nav-link" id="nav-link-catalog">All Inventory</a>
+        <a href="#experiences" class="nav-link" id="nav-link-exp">Jabalpur Stories</a>
         <a href="#how-it-works" class="nav-link" id="nav-link-how">How It Works</a>
         <a href="#shops" class="nav-link" id="nav-link-shops">Partner Shops</a>
         <a href="./src/customer/bookings.html" class="nav-link" id="nav-link-bookings">My Bookings</a>
@@ -56,27 +62,34 @@
   </header>
 
   <main>
-    <!-- Hero Section -->
-    <section class="py-12" style="position: relative; overflow: hidden;">
-      <div class="hero-glow-sphere" style="top: -80px; left: -80px; background: hsla(349, 70%, 41%, 0.16);"></div>
-      <div class="hero-glow-sphere" style="bottom: -120px; right: -80px; background: hsla(32, 69%, 77%, 0.12);"></div>
-      
-      <div class="container" style="position: relative; z-index: 1;">
-        <div style="max-width: 820px; margin: 0 auto; text-align: center;">
-          <div class="badge badge-gold mb-4 animate-pulse-glow" id="hero-badge">
-            👑 RENTANY — Hyperlocal Mobile Rentals in Jabalpur, Madhya Pradesh
+    <!-- Natural Luxury Hero Section with Bhedaghat Backdrop and Floating Botanicals -->
+    <section class="hero-natural-backdrop py-12">
+      <!-- Floating Organic Botanical Leaf Elements -->
+      <img src="./assets/ingredient1.svg" class="botanical-drift botanical-drift-1" alt="" aria-hidden="true">
+      <img src="./assets/ingredient3.svg" class="botanical-drift botanical-drift-2" alt="" aria-hidden="true">
+      <img src="./assets/ingredient7.svg" class="botanical-drift botanical-drift-3" alt="" aria-hidden="true">
+      <img src="./assets/ingredient12.svg" class="botanical-drift botanical-drift-4" alt="" aria-hidden="true">
+
+      <div class="container" style="position: relative; z-index: 2;">
+        <div style="max-width: 860px; margin: 0 auto; text-align: center;">
+          
+          <div class="badge badge-gold mb-4" id="hero-badge" style="box-shadow: 0 0 16px hsla(32, 69%, 77%, 0.3);">
+            <img src="./assets/fl.png" style="height: 16px; width: auto; margin-right: 0.4rem;" alt="">
+            HYPERLOCAL SMARTPHONE RENTALS • JABALPUR, MADHYA PRADESH
           </div>
-          <h1 style="margin-bottom: 1.25rem;">
-            Rent Flagship Smartphones for <span style="color: var(--brand-primary);">Events, Travel & Shoots</span>.
+
+          <h1 class="hero-title" style="margin-bottom: 1.25rem;">
+            Flagship Power for Jabalpur's <span style="color: var(--brand-primary); text-shadow: 0 0 24px hsla(349, 70%, 41%, 0.45);">Natural Wonders & Royal Moments</span>.
           </h1>
-          <p style="font-size: 1.15rem; margin-bottom: 2rem; color: var(--text-secondary);">
-            Pick up an iPhone 15 Pro, S24 Ultra, or OnePlus today from verified retail shops in <strong>Sadar Bazar, Russell Chowk & Gorakhpur</strong>. Digital KYC via DigiLocker. 100% escrow-backed deposit refund.
+
+          <p style="font-size: 1.15rem; margin-bottom: 2rem; color: var(--text-secondary); line-height: 1.7; max-width: 740px; margin-left: auto; margin-right: auto;">
+            Rent pristine iPhone 15 Pro Max, Galaxy S24 Ultra & OnePlus 12 from verified retail shops in <strong>Sadar Bazar, Russell Chowk & Gorakhpur</strong>. Capture Bhedaghat mist, Kanha wildlife, and heritage weddings with zero upfront device ownership cost.
           </p>
 
           <!-- Search & Locality Quick Bar -->
-          <div style="background: var(--bg-surface); padding: 0.6rem 0.8rem; border-radius: var(--radius-xl); border: 1px solid var(--border-gold); display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; box-shadow: var(--shadow-md);">
-            <div style="display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; color: var(--brand-gold); font-weight: 700;">
-              <span>📍</span> <span>Jabalpur Hubs:</span>
+          <div style="background: hsla(31, 55%, 11%, 0.9); backdrop-filter: blur(14px); padding: 0.75rem 1rem; border-radius: var(--radius-xl); border: 1px solid var(--border-gold); display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center; justify-content: center; box-shadow: var(--shadow-lg);">
+            <div style="display: flex; align-items: center; gap: 0.5rem; padding: 0.4rem 0.8rem; color: var(--brand-gold); font-weight: 700; font-size: 0.9rem;">
+              <img src="./assets/fl.png" style="height: 16px; width: auto;" alt=""> <span>Jabalpur Hubs:</span>
             </div>
             <div class="filter-chips" id="hero-locality-chips">
               <button class="filter-chip active" data-locality="ALL" id="chip-loc-all">All Jabalpur</button>
@@ -88,38 +101,42 @@
           </div>
         </div>
 
-        <!-- Trust Stats Strip -->
-        <div class="grid grid-cols-4 mt-8" style="background: var(--bg-glass-card); backdrop-filter: blur(10px); border: 1px solid var(--border-glass); border-radius: var(--radius-xl); padding: 1.5rem; text-align: center;">
+        <!-- Trust Stats Strip with Botanical Stippling -->
+        <div class="grid grid-cols-4 mt-8" style="background: hsla(31, 60%, 12%, 0.82); backdrop-filter: blur(14px); border: 1px solid var(--border-gold); border-radius: var(--radius-xl); padding: 1.75rem 1.5rem; text-align: center; box-shadow: var(--shadow-md);">
           <div>
-            <div style="font-family: var(--font-display); font-size: 1.85rem; font-weight: 900; color: var(--brand-primary);">100%</div>
-            <div style="font-size: 0.825rem; color: var(--text-muted);">Escrow Protected Deposits</div>
+            <div style="font-family: var(--font-serif); font-size: 2rem; font-weight: 800; color: var(--brand-primary);">100%</div>
+            <div style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.2rem;">Escrow Protected Deposits</div>
           </div>
           <div>
-            <div style="font-family: var(--font-display); font-size: 1.85rem; font-weight: 900; color: var(--brand-gold);">₹3,000</div>
-            <div style="font-size: 0.825rem; color: var(--text-muted);">Local Resident Deposit Tier</div>
+            <div style="font-family: var(--font-serif); font-size: 2rem; font-weight: 800; color: var(--brand-gold);">₹3,000</div>
+            <div style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.2rem;">Local Resident Deposit Tier</div>
           </div>
           <div>
-            <div style="font-family: var(--font-display); font-size: 1.85rem; font-weight: 900; color: var(--text-primary);">DigiLocker</div>
-            <div style="font-size: 0.825rem; color: var(--text-muted);">Instant Govt OKYC</div>
+            <div style="font-family: var(--font-serif); font-size: 2rem; font-weight: 800; color: #FFF6EC;">DigiLocker</div>
+            <div style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.2rem;">Instant Paperless OKYC</div>
           </div>
           <div>
-            <div style="font-family: var(--font-display); font-size: 1.85rem; font-weight: 900; color: var(--brand-primary);">4 Verified</div>
-            <div style="font-size: 0.825rem; color: var(--text-muted);">Jabalpur Retail Stores</div>
+            <div style="font-family: var(--font-serif); font-size: 2rem; font-weight: 800; color: var(--brand-primary);">4 Verified</div>
+            <div style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.2rem;">Jabalpur Partner Retailers</div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Phone Catalog Grid Section -->
-    <section class="py-8" id="catalog-section">
+    <section class="py-12" id="catalog-section" style="position: relative;">
       <div class="container">
         
-        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
           <div>
-            <span class="badge badge-gold">LIVE HARDWARE INVENTORY</span>
-            <h2 style="margin-top: 0.4rem;">Available Flagships in Jabalpur Today</h2>
+            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.4rem;">
+              <img src="./assets/fl.png" style="height: 16px; width: auto;" alt="">
+              <span class="badge badge-gold">AUTHENTIC RETAIL DISPLAY INVENTORY</span>
+            </div>
+            <h2>Available Flagships in Jabalpur Today</h2>
+            <p>Every smartphone is battery-certified, sanitized, and ready for immediate counter pickup.</p>
           </div>
-          <div style="display: flex; gap: 0.5rem;" id="brand-filters">
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;" id="brand-filters">
             <button class="filter-chip active" data-brand="ALL" id="brand-all">All Brands</button>
             <button class="filter-chip" data-brand="Apple" id="brand-apple">Apple</button>
             <button class="filter-chip" data-brand="Samsung" id="brand-samsung">Samsung</button>
@@ -136,35 +153,102 @@
       </div>
     </section>
 
-    <!-- How It Works Section -->
-    <section class="py-12" id="how-it-works" style="background: var(--bg-secondary); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+    <!-- Symmetrical Ornate Flourish Divider -->
+    <div class="flourish-divider" aria-hidden="true">
+      <img src="./assets/fl.png" class="flourish-crest" alt="">
+    </div>
+
+    <!-- Curated Jabalpur Experiences Showcase -->
+    <section class="py-8" id="experiences">
       <div class="container">
-        <div style="text-align: center; max-width: 650px; margin: 0 auto 3rem;">
-          <span class="badge badge-gold">SIMPLE & ESCROW-SAFE</span>
-          <h2 style="margin-top: 0.5rem;">How RENTANY Works</h2>
-          <p>Four easy steps to rent premium technology without the full retail price.</p>
+        <div style="text-align: center; max-width: 720px; margin: 0 auto 2.5rem;">
+          <div style="display: inline-flex; align-items: center; gap: 0.4rem;" class="mb-2">
+            <img src="./assets/fl.png" style="height: 16px; width: auto;" alt="">
+            <span class="badge badge-gold">CURATED FOR JABALPUR</span>
+          </div>
+          <h2>Rent For Moments That Matter</h2>
+          <p>Don't let smartphone limitations compromise once-in-a-lifetime memories in the Marble City.</p>
+        </div>
+
+        <div class="experience-grid">
+          <!-- Card 1: Bhedaghat -->
+          <div class="experience-card">
+            <div class="experience-card-bg" style="background-image: url('./assets/jabalpur-bhedaghat.jpg');"></div>
+            <div class="experience-card-content">
+              <span class="experience-badge">📸 4K ProRAW Cinema</span>
+              <h3 class="experience-title">Bhedaghat Marble Rocks & Dhuandhar</h3>
+              <p class="experience-desc">Capture the iridescent white marble gorge on the holy Narmada with iPhone 15 Pro Max 5x optical telephoto and ProRes log color grading.</p>
+            </div>
+          </div>
+
+          <!-- Card 2: Kanha Safari -->
+          <div class="experience-card">
+            <div class="experience-card-bg" style="background-image: url('./assets/phones/samsung-s24-ultra.jpg');"></div>
+            <div class="experience-card-content">
+              <span class="experience-badge">🐅 100x Space Zoom</span>
+              <h3 class="experience-title">Kanha & Bandhavgarh Tiger Safaris</h3>
+              <p class="experience-desc">Spot majestic Royal Bengal Tigers from open gypsies. The S24 Ultra 200MP sensor and AI stabilizer bring jungle action right to your lens.</p>
+            </div>
+          </div>
+
+          <!-- Card 3: Royal Celebrations -->
+          <div class="experience-card">
+            <div class="experience-card-bg" style="background-image: url('./assets/phones/iphone15.jpg');"></div>
+            <div class="experience-card-content">
+              <span class="experience-badge">✨ Low-Light Portraiture</span>
+              <h3 class="experience-title">Tilwara Ghat & Royal Weddings</h3>
+              <p class="experience-desc">Evening Sangeet and Haldi ceremonies illuminated in vivid natural skin tones with cinematic depth-of-field and zero shutter lag.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Symmetrical Ornate Flourish Divider -->
+    <div class="flourish-divider" aria-hidden="true">
+      <img src="./assets/fl.png" class="flourish-crest" alt="">
+    </div>
+
+    <!-- How It Works Section -->
+    <section class="py-12" id="how-it-works" style="background: hsla(31, 55%, 9%, 0.85); border-top: 1px solid var(--border-gold); border-bottom: 1px solid var(--border-gold);">
+      <div class="container">
+        <div style="text-align: center; max-width: 680px; margin: 0 auto 3rem;">
+          <div style="display: inline-flex; align-items: center; gap: 0.4rem;" class="mb-2">
+            <img src="./assets/fl.png" style="height: 16px; width: auto;" alt="">
+            <span class="badge badge-gold">SIMPLE & ESCROW-SAFE</span>
+          </div>
+          <h2>How RENTANY Works</h2>
+          <p>Four transparent steps to rent flagship mobile technology without retail depreciation.</p>
         </div>
 
         <div class="grid grid-cols-4">
-          <div class="card card-static">
-            <div style="font-size: 2.2rem; margin-bottom: 1rem;">📱</div>
-            <h4>1. Pick Phone & Dates</h4>
-            <p class="mt-2 text-sm">Select your phone and duration (1 to 30 days). See real-time rates and transparent security deposit breakdown.</p>
+          <div class="card card-static" style="border-color: var(--border-gold);">
+            <div style="height: 52px; display: flex; align-items: center; margin-bottom: 1rem;">
+              <img src="./assets/ingredient5.svg" style="height: 44px; width: auto; opacity: 0.85;" alt="">
+            </div>
+            <h4>1. Pick Device & Dates</h4>
+            <p class="mt-2 text-sm">Select your phone and duration (1 to 30 days). See real-time rates with duration discounts and escrow deposit breakdown.</p>
           </div>
-          <div class="card card-static">
-            <div style="font-size: 2.2rem; margin-bottom: 1rem;">🆔</div>
+          <div class="card card-static" style="border-color: var(--border-gold);">
+            <div style="height: 52px; display: flex; align-items: center; margin-bottom: 1rem;">
+              <img src="./assets/ingredient9.svg" style="height: 44px; width: auto; opacity: 0.85;" alt="">
+            </div>
             <h4>2. 1-Minute DigiLocker KYC</h4>
             <p class="mt-2 text-sm">Verify your identity instantly via DigiLocker Aadhaar OTP. Local Jabalpur residents unlock the reduced ₹3,000 deposit tier.</p>
           </div>
-          <div class="card card-static">
-            <div style="font-size: 2.2rem; margin-bottom: 1rem;">🏪</div>
+          <div class="card card-static" style="border-color: var(--border-gold);">
+            <div style="height: 52px; display: flex; align-items: center; margin-bottom: 1rem;">
+              <img src="./assets/ingredient4.svg" style="height: 44px; width: auto; opacity: 0.85;" alt="">
+            </div>
             <h4>3. In-Store Handover</h4>
-            <p class="mt-2 text-sm">Visit the verified partner shop in Sadar or Russell Chowk. Present your 6-digit <strong>Pickup OTP</strong>, inspect condition, and collect.</p>
+            <p class="mt-2 text-sm">Visit the verified partner shop in Sadar or Russell Chowk. Present your confidential 6-digit <strong>Pickup OTP</strong>, inspect condition, and collect.</p>
           </div>
-          <div class="card card-static">
-            <div style="font-size: 2.2rem; margin-bottom: 1rem;">💸</div>
+          <div class="card card-static" style="border-color: var(--border-gold);">
+            <div style="height: 52px; display: flex; align-items: center; margin-bottom: 1rem;">
+              <img src="./assets/ingredient10.svg" style="height: 44px; width: auto; opacity: 0.85;" alt="">
+            </div>
             <h4>4. Return & Instant Refund</h4>
-            <p class="mt-2 text-sm">Return phone on time. The shop verifies condition and your security deposit is automatically refunded to your original payment account.</p>
+            <p class="mt-2 text-sm">Return phone on time. The shop verifies condition and your security deposit is automatically refunded via Razorpay to your account.</p>
           </div>
         </div>
       </div>
@@ -173,10 +257,16 @@
     <!-- Jabalpur Partner Shops Section -->
     <section class="py-12" id="shops">
       <div class="container">
-        <div style="margin-bottom: 2rem;">
-          <span class="badge badge-gold">PHYSICAL RETAILERS</span>
-          <h2 style="margin-top: 0.4rem;">Our Verified Partner Shops in Jabalpur</h2>
-          <p>Every phone is inspected, genuine, and physically available for inspection before handover.</p>
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <div style="display: inline-flex; align-items: center; gap: 0.4rem;" class="mb-2">
+              <img src="./assets/fl-filled.png" style="height: 16px; width: auto;" alt="">
+              <span class="badge badge-gold">PHYSICAL RETAIL PARTNERS</span>
+            </div>
+            <h2>Verified Electronics Stores in Jabalpur</h2>
+            <p>Every device is physically inspected, genuine, and available for hands-on review at pickup.</p>
+          </div>
+          <a href="./src/shop/dashboard.html" class="btn btn-secondary btn-sm">Shopkeeper Login &rarr;</a>
         </div>
 
         <div class="grid grid-cols-4" id="shops-list-container">
@@ -186,34 +276,40 @@
     </section>
   </main>
 
+  <!-- Ornate Flourish Divider -->
+  <div class="flourish-divider" aria-hidden="true">
+    <img src="./assets/fl.png" class="flourish-crest" alt="">
+  </div>
+
   <!-- Footer -->
-  <footer style="background: var(--bg-surface); border-top: 1px solid var(--border-gold); padding: 3rem 0; margin-top: 4rem;">
+  <footer style="background: var(--bg-surface); border-top: 1px solid var(--border-gold); padding: 3.5rem 0 2rem; margin-top: 2rem; position: relative;">
     <div class="container">
-      <div class="grid grid-cols-3" style="margin-bottom: 2rem;">
+      <div class="grid grid-cols-3" style="margin-bottom: 2.5rem; gap: 2.5rem;">
         <div>
           <div class="brand-logo" style="margin-bottom: 0.8rem;">
-            <span style="color: var(--brand-primary);">⚡</span> RENT<span class="accent">ANY</span>
+            <img src="./assets/fl.png" class="brand-crest" alt="RENTANY Lotus Crest">
+            <div>RENT<span class="accent">ANY</span></div>
           </div>
-          <p class="text-sm" style="max-width: 320px;">
-            The trusted smartphone rental marketplace for Jabalpur, MP. Operated in partnership with verified local electronics merchants.
+          <p class="text-sm" style="max-width: 320px; line-height: 1.6;">
+            The premium smartphone rental marketplace for Jabalpur, Madhya Pradesh. Operated in partnership with verified local electronics merchants.
           </p>
-          <div class="mt-4 text-xs text-muted">
-            Serving Sadar Bazar, Russell Chowk, Gorakhpur, Wright Town, Napier Town, and Cantt.
+          <div class="mt-4 text-xs" style="color: var(--text-gold);">
+            📍 Serving Sadar Bazar, Russell Chowk, Gorakhpur, Wright Town, Napier Town, and Cantt.
           </div>
         </div>
         <div>
-          <h5 style="margin-bottom: 1rem; color: var(--text-gold);">Platform Portals</h5>
-          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem;">
-            <li><a href="./index.html">Customer Discovery</a></li>
-            <li><a href="./src/customer/catalog.html">All Available Inventory</a></li>
-            <li><a href="./src/customer/bookings.html">Active Passes & Pickup OTP</a></li>
-            <li><a href="./src/shop/dashboard.html">Shop Partner Portal</a></li>
-            <li><a href="./src/admin/dashboard.html">Platform Administration</a></li>
+          <h5 style="margin-bottom: 1rem; color: var(--text-gold); font-family: var(--font-serif); font-size: 1.05rem;">Platform Portals</h5>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.9rem;">
+            <li><a href="./index.html">📱 Customer Discovery App</a></li>
+            <li><a href="./src/customer/catalog.html">📋 All Available Smartphone Inventory</a></li>
+            <li><a href="./src/customer/bookings.html">🎟️ Active Passes & Pickup OTP Pass</a></li>
+            <li><a href="./src/shop/dashboard.html">🏪 Shop Partner Portal (80% Payouts)</a></li>
+            <li><a href="./src/admin/dashboard.html">🛡️ Platform Administration (20% Take)</a></li>
           </ul>
         </div>
         <div>
-          <h5 style="margin-bottom: 1rem; color: var(--text-gold);">Security & Compliance</h5>
-          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.85rem; color: var(--text-muted);">
+          <h5 style="margin-bottom: 1rem; color: var(--text-gold); font-family: var(--font-serif); font-size: 1.05rem;">Security & Compliance</h5>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.85rem; color: var(--text-muted);">
             <li>✓ UIDAI Masked Aadhaar Only (No raw 12-digit numbers)</li>
             <li>✓ Razorpay Escrow Protected Deposits</li>
             <li>✓ Hardware IMEI Blacklist Tracking</li>
@@ -221,32 +317,37 @@
           </ul>
         </div>
       </div>
-      <div style="border-top: 1px solid var(--border-subtle); padding-top: 1.5rem; text-align: center; font-size: 0.8rem; color: var(--text-muted);">
-        © 2026 RENTANY (rentany.in). All rights reserved. Jabalpur, Madhya Pradesh.
+      <div style="border-top: 1px solid var(--border-subtle); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.8rem; color: var(--text-muted);">
+        <div>
+          © 2026 RENTANY (rentany.in). All rights reserved. Jabalpur, Madhya Pradesh, India.
+        </div>
+        <div style="display: flex; gap: 1rem; align-items: center;">
+          <span style="color: var(--brand-gold);">Brand Colors: #B21F3A • #EDC79B • #3D250B</span>
+        </div>
       </div>
     </div>
   </footer>
 
   <!-- Mock DigiLocker Modal -->
   <div class="modal-overlay" id="modal-kyc">
-    <div class="modal-container">
+    <div class="modal-container" style="border-color: var(--border-gold);">
       <div class="modal-header">
         <div style="display: flex; align-items: center; gap: 0.6rem;">
-          <span style="font-size: 1.4rem;">🆔</span>
+          <img src="./assets/fl.png" style="height: 22px; width: auto;" alt="">
           <h3 style="margin: 0; color: var(--text-gold);">DigiLocker Identity Verification</h3>
         </div>
         <button class="modal-close-btn" onclick="closeKycModal()" id="btn-close-kyc">&times;</button>
       </div>
-      <div style="background: var(--bg-surface); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-gold); margin-bottom: 1.25rem;">
-        <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+      <div style="background: var(--bg-surface); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-gold); margin-bottom: 1.25rem;">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
           <span class="text-sm text-muted">Verification Status:</span>
           <span class="badge badge-gold">TIER 1 — JABALPUR RESIDENT</span>
         </div>
-        <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
           <span class="text-sm text-muted">Masked Aadhaar:</span>
           <span class="text-sm font-mono font-bold text-gold">XXXX-XXXX-8921</span>
         </div>
-        <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
           <span class="text-sm text-muted">Verified Legal Name:</span>
           <span class="text-sm font-bold">Aditya Mishra</span>
         </div>
@@ -255,8 +356,8 @@
           <span class="text-sm font-bold" style="color: var(--brand-gold);">Jabalpur, Madhya Pradesh (482001)</span>
         </div>
       </div>
-      <p class="text-xs text-muted mb-4">
-        🔒 In compliance with UIDAI regulations, raw 12-digit Aadhaar numbers and biometrics are never stored. Only verified name, masked Aadhaar, and residency status are retained in encrypted storage.
+      <p class="text-xs text-muted mb-4" style="line-height: 1.5;">
+        🔒 In strict compliance with UIDAI regulations and the Aadhaar Act 2016, raw 12-digit Aadhaar numbers and biometrics are never stored. Only verified name, masked Aadhaar (XXXX-XXXX-8921), and residency status are retained in encrypted storage.
       </p>
       <button class="btn btn-primary btn-block" onclick="closeKycModal()">
         Got It — Ready to Rent
@@ -295,12 +396,11 @@
 
       container.innerHTML = filtered.map(phone => `
         <article class="phone-card" id="card-${phone.id}">
-          <div class="phone-card-image-box" style="background: ${phone.image_gradient};">
+          <div class="phone-card-image-box">
             <span class="badge badge-gold phone-card-tag">${phone.tag}</span>
             <span class="badge badge-battery phone-card-battery">🔋 ${phone.battery_health}% Health</span>
-            <div style="font-size: 4.8rem; text-shadow: 0 10px 25px rgba(0,0,0,0.6);" class="animate-float">
-              ${phone.device_icon}
-            </div>
+            <img src="${phone.image_url}" class="phone-card-img" alt="${phone.brand} ${phone.model}">
+            <img src="${phone.corner_motif || './assets/ingredient5.svg'}" class="phone-card-corner-motif" alt="" aria-hidden="true">
           </div>
           <div class="phone-card-body">
             <h3 class="phone-card-title">${phone.brand} ${phone.model}</h3>
@@ -314,7 +414,7 @@
               <span class="badge badge-grade-a">Grade A Mint</span>
             </div>
 
-            <p class="text-xs text-muted mb-4" style="line-height: 1.4;">
+            <p class="text-xs text-muted mb-4" style="line-height: 1.45;">
               ✨ ${phone.camera_highlight}
             </p>
 
@@ -324,7 +424,7 @@
                   ${formatINR(phone.daily_rate)} <small>/day</small>
                 </div>
                 <div class="phone-deposit-hint">
-                  ₹${phone.deposit_resident.toLocaleString()} Deposit (Resident)
+                  ₹${phone.deposit_resident.toLocaleString()} Resident Deposit
                 </div>
               </div>
               <a href="./src/customer/device.html?id=${phone.id}" class="btn btn-primary btn-sm" id="btn-view-${phone.id}">
@@ -341,12 +441,14 @@
       if (!container) return;
 
       container.innerHTML = MOCK_SHOPS.map(shop => `
-        <div class="card" id="shop-card-${shop.id}">
+        <div class="card" id="shop-card-${shop.id}" style="border-color: var(--border-gold);">
           <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.75rem;">
-            <div class="badge badge-gold">✓ Verified Partner</div>
+            <div class="badge badge-gold">
+              <img src="./assets/fl-filled.png" style="height: 12px; width: auto; margin-right: 0.2rem;" alt=""> Verified Partner
+            </div>
             <div class="text-sm font-bold text-gold">★ ${shop.rating}</div>
           </div>
-          <h4 style="color: var(--text-primary);">${shop.name}</h4>
+          <h4 style="color: var(--text-primary); font-family: var(--font-serif);">${shop.name}</h4>
           <p class="text-xs text-muted mt-1">📍 ${shop.landmark}, ${shop.locality}</p>
           <div style="border-top: 1px solid var(--border-subtle); margin-top: 1rem; padding-top: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
             <span class="text-xs text-muted">${shop.total_rentals} completed rentals</span>

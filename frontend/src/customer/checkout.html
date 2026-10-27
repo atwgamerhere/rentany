@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Secure Checkout & Escrow Payment — RENTANY</title>
+  <title>Checkout & Escrow Authorization — RENTANY</title>
   
+  <link rel="icon" type="image/png" href="../../assets/fl.png">
   <link rel="stylesheet" href="../css/variables.css">
   <link rel="stylesheet" href="../css/base.css">
   <link rel="stylesheet" href="../css/components.css">
@@ -15,7 +16,9 @@
   <!-- Top Demo Role Switcher -->
   <aside class="demo-role-bar">
     <div style="display: flex; align-items: center; gap: 0.6rem;">
-      <span class="badge badge-grade-a">RENTANY PHASE 2</span>
+      <span class="badge badge-gold" style="font-size: 0.72rem; padding: 0.2rem 0.6rem;">
+        <img src="../../assets/fl.png" style="height: 12px; width: auto; margin-right: 0.3rem;" alt=""> RENTANY PHASE 2
+      </span>
       <span style="color: var(--text-muted); font-size: 0.8rem;">Switch Portal View:</span>
     </div>
     <nav class="demo-role-pill-group">
@@ -29,21 +32,31 @@
   <header class="navbar">
     <div class="container nav-container">
       <a href="../../index.html" class="brand-logo">
-        <span style="color: var(--brand-primary);">⚡</span>
+        <img src="../../assets/fl.png" class="brand-crest" alt="RENTANY Royal Lotus Crest">
         <div>RENT<span class="accent">ANY</span></div>
       </a>
       <div class="flex items-center gap-2">
-        <span class="badge badge-gold">🔒 256-Bit SSL Encrypted Escrow</span>
+        <span class="badge badge-gold">
+          <img src="../../assets/fl.png" style="height: 12px; width: auto; margin-right: 0.2rem;" alt=""> 256-Bit SSL Encrypted Escrow
+        </span>
       </div>
     </div>
   </header>
 
-  <main class="py-8">
-    <div class="container" style="max-width: 900px;">
+  <main class="py-8" style="position: relative; overflow: hidden;">
+    <!-- Ambient Botanical Leaves -->
+    <img src="../../assets/ingredient4.svg" class="botanical-drift botanical-drift-1" style="top: 20px; left: -25px; opacity: 0.16;" alt="" aria-hidden="true">
+    <img src="../../assets/ingredient10.svg" class="botanical-drift botanical-drift-2" style="top: 80px; right: -25px; opacity: 0.16;" alt="" aria-hidden="true">
+
+    <div class="container" style="max-width: 920px; position: relative; z-index: 2;">
       
       <div style="margin-bottom: 2rem;">
+        <div style="display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.2rem;">
+          <img src="../../assets/fl.png" style="height: 16px; width: auto;" alt="">
+          <span class="badge badge-gold">SECURE ESCROW CHECKOUT</span>
+        </div>
         <h2>Complete Your Reservation</h2>
-        <p>Verify your digital KYC and authorize payment. Your deposit is held in secure escrow.</p>
+        <p>Verify your digital KYC and authorize payment. Your deposit is held in secure escrow backed by Razorpay.</p>
       </div>
 
       <div class="grid grid-cols-3" style="gap: 2rem; align-items: flex-start;">
@@ -52,10 +65,12 @@
         <div style="grid-column: span 2;">
           
           <!-- Step 1: DigiLocker KYC Verification -->
-          <div class="card card-static mb-4" style="border-left: 4px solid var(--brand-primary);">
+          <div class="card card-static mb-4" style="border-left: 4px solid var(--brand-primary); border-color: var(--border-gold);">
             <div class="flex justify-between items-center mb-2">
-              <h3 style="font-size: 1.15rem; color: var(--text-gold);">1. Customer Identity & DigiLocker KYC</h3>
-              <span class="badge badge-gold">✓ TIER 1 JABALPUR RESIDENT</span>
+              <h3 style="font-size: 1.15rem; color: var(--text-gold); font-family: var(--font-serif);">1. Customer Identity & DigiLocker KYC</h3>
+              <span class="badge badge-gold">
+                <img src="../../assets/fl.png" style="height: 12px; width: auto; margin-right: 0.2rem;" alt=""> TIER 1 JABALPUR RESIDENT
+              </span>
             </div>
             <p class="text-xs text-muted mb-4">
               Identity verified via Setu DigiLocker API. Masked Aadhaar tokenized in compliance with UIDAI regulations.
@@ -82,8 +97,8 @@
           </div>
 
           <!-- Step 2: In-Store Handover Agreement -->
-          <div class="card card-static mb-4">
-            <h3 style="font-size: 1.15rem; margin-bottom: 0.75rem; color: var(--text-gold);">2. Handover Protocol Acknowledgment</h3>
+          <div class="card card-static mb-4" style="border-color: var(--border-gold);">
+            <h3 style="font-size: 1.15rem; margin-bottom: 0.75rem; color: var(--text-gold); font-family: var(--font-serif);">2. Handover Protocol Acknowledgment</h3>
             <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.875rem; color: var(--text-secondary);">
               <li class="flex items-center gap-2">
                 <span class="text-brand font-bold">✓</span>
@@ -103,7 +118,7 @@
           <!-- Step 3: Payment Gateway Selector (Razorpay Sandbox) -->
           <div class="card card-static" style="border-color: var(--border-focus);">
             <div class="flex justify-between items-center mb-4">
-              <h3 style="font-size: 1.15rem; color: var(--text-gold);">3. Payment Method (Razorpay Gateway)</h3>
+              <h3 style="font-size: 1.15rem; color: var(--text-gold); font-family: var(--font-serif);">3. Payment Method (Razorpay Gateway)</h3>
               <span class="badge badge-gold">SANDBOX TEST MODE</span>
             </div>
 
@@ -142,15 +157,17 @@
 
         <!-- Right: Order Summary Sidebar (1 col) -->
         <div>
-          <div class="card card-static" style="position: sticky; top: calc(var(--navbar-height) + 1.5rem); border-color: var(--border-gold);">
-            <h4 style="margin-bottom: 1rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.5rem; color: var(--text-gold);">
+          <div class="card card-static" style="position: sticky; top: calc(var(--navbar-height) + 1.5rem); border-color: var(--border-gold); background: var(--bg-surface);">
+            <h4 style="margin-bottom: 1rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.5rem; color: var(--text-gold); font-family: var(--font-serif);">
               Reservation Summary
             </h4>
 
-            <div class="mb-4">
-              <div class="text-xs text-muted">Device:</div>
-              <div class="font-bold text-lg text-primary" id="summary-device-title">iPhone 15 Pro Max</div>
-              <div class="text-xs text-brand font-bold" id="summary-shop-title">Apex Mobile Gallery (Sadar)</div>
+            <div class="mb-4 flex items-center gap-3">
+              <img id="summary-device-img" src="../../assets/phones/iphone15-pro-max.jpg" style="width: 58px; height: 58px; object-fit: cover; border-radius: var(--radius-sm); border: 1px solid var(--border-gold);" alt="">
+              <div>
+                <div class="font-bold text-md text-primary" id="summary-device-title">iPhone 15 Pro Max</div>
+                <div class="text-xs text-brand font-bold" id="summary-shop-title">Apex Mobile Gallery (Sadar)</div>
+              </div>
             </div>
 
             <div style="display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.875rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 1rem; margin-bottom: 1rem;">
@@ -176,7 +193,7 @@
               <span class="badge badge-gold">Escrow Safe</span>
             </div>
 
-            <div class="text-xs text-muted" style="line-height: 1.4; background: var(--bg-surface); padding: 0.75rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+            <div class="text-xs text-muted" style="line-height: 1.45; background: hsla(31, 55%, 9%, 0.8); padding: 0.75rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
               💡 <strong>Deposit Guarantee</strong>: Upon returning the device to the store in clean condition, your ₹3,000 deposit is instantly released via Razorpay refund API.
             </div>
           </div>
@@ -201,18 +218,23 @@
 
     const quote = calculateQuote(phone.daily_rate, days, isResident);
 
+    // Populate Summary
     document.getElementById('summary-device-title').innerText = `${phone.brand} ${phone.model}`;
     document.getElementById('summary-shop-title').innerText = shop.name;
-    document.getElementById('summary-days').innerText = `${quote.days} Days`;
+    document.getElementById('summary-days').innerText = `${days} Days`;
     document.getElementById('summary-net-rent').innerText = formatINR(quote.netRentalFee);
     document.getElementById('summary-deposit').innerText = formatINR(quote.depositAmount);
     document.getElementById('summary-total').innerText = formatINR(quote.totalPayable);
     document.getElementById('btn-pay-amount').innerText = formatINR(quote.totalPayable);
+    
+    if (phone.image_url) {
+      document.getElementById('summary-device-img').src = phone.image_url;
+    }
 
     window.selectPayTab = (tab) => {
       document.querySelectorAll('#payment-tabs .filter-chip').forEach(b => b.classList.remove('active'));
       event.target.classList.add('active');
-      showToast(`Selected ${tab.toUpperCase()} payment mode`, 'info');
+      showToast(`Selected ${tab.toUpperCase()} payment option`, 'info');
     };
 
     window.setUpi = (vpa) => {
@@ -222,15 +244,12 @@
     window.simulatePayment = () => {
       const btn = document.getElementById('btn-pay-now');
       btn.disabled = true;
-      btn.innerHTML = `<span class="animate-pulse-glow">⏳ Authorizing with Razorpay Sandbox...</span>`;
+      btn.innerText = 'Authorizing with Razorpay Escrow...';
 
       setTimeout(() => {
-        btn.innerHTML = `✓ Payment Successful! Generating Pickup OTP...`;
-        btn.style.background = `var(--brand-primary)`;
-        showToast('Payment verified! Pickup OTP generated.', 'success');
-
+        showToast('Payment Captured! Generated Pickup Pass #JR-2026-8921', 'success');
         setTimeout(() => {
-          window.location.href = './bookings.html?new_booking=1';
+          window.location.href = './bookings.html';
         }, 1200);
       }, 1500);
     };

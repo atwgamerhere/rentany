@@ -16,6 +16,7 @@
 | [[#ADR-006]] | DigiLocker OKYC & Masked Aadhaar Storage Strategy | 2026-10-27 | 🟢 Accepted |
 | [[#ADR-007]] | Upfront Charge + Automated Deposit Refund vs Card Pre-Auth Holds | 2026-10-27 | 🟢 Accepted |
 | [[#ADR-008]] | Business & Provider Parameters (20% Take-Rate, Tiered Deposits, Razorpay+Setu) | 2026-10-27 | 🟢 Accepted |
+| [[#ADR-009]] | Official Brand Identity & Color Palette: RENTANY (#B21F3A, #EDC79B, #3D250B) | 2026-10-27 | 🟢 Accepted |
 
 ---
 
@@ -119,3 +120,18 @@
 - **Consequences**:
   - Positive: Increases gross margin per 3-day rental from ₹540 to ₹720 (+33% profitability); lowers local barrier to entry while protecting against outstation flight risk; unifies best-in-class developer APIs (Razorpay + Setu).
   - Negative: Higher deposit on tourists may slightly reduce outstation bookings; shopkeeper payout model requires clean return sign-off.
+
+---
+
+### ADR-009: Official Brand Identity & Color Palette: RENTANY (#B21F3A, #EDC79B, #3D250B)
+- **Date**: 2026-10-27
+- **Context**: The founder formalized the marketplace brand name as **RENTANY** and specified an official luxury color palette: `#B21F3A`, `#EDC79B`, and `#3D250B`.
+- **Decision**:
+  1. **Brand Identity**: Stylized as **RENTANY** (domain `rentany.in`).
+  2. **Color Palette Mapping**:
+     - `#B21F3A` (Royal Crimson / Scarlet): Primary interactive brand accent, hero CTA buttons, active state highlights, and logo accent.
+     - `#EDC79B` (Warm Champagne Gold / Sand): Secondary luxury text, badge borders, pricing highlights, deposit badges, and subtle radiant glow spheres.
+     - `#3D250B` (Deep Espresso / Roasted Mocha): Base dark luxury surfaces, glassmorphic card backgrounds (`hsl(31, 55%, 12%)` to `hsl(31, 69%, 14%)`), with warm ivory typography (`#FDF9F5`).
+- **Consequences**:
+  - Positive: Transforms the marketplace aesthetic into a warm, high-status luxury concierge brand; eliminates generic blue/emerald tropes; evokes security, warmth, and trust for high-value hardware rentals.
+  - Negative: Requires careful contrast auditing to ensure text accessibility (WCAG AA) using ivory white and champagne gold against the dark espresso surfaces.

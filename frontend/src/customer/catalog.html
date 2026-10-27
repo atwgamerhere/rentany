@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>All Rental Phones — Jabalpur Rent</title>
-  <meta name="description" content="Browse all available iPhones, Galaxy Ultra, and OnePlus devices for rent in Jabalpur. Filter by Sadar, Russell Chowk, Gorakhpur, and Wright Town.">
+  <title>All Rental Phones — RENTANY</title>
+  <meta name="description" content="Browse all available iPhones, Galaxy Ultra, and OnePlus devices for rent in Jabalpur on RENTANY. Verified local shops in Sadar, Russell Chowk, Gorakhpur.">
   
   <link rel="stylesheet" href="../css/variables.css">
   <link rel="stylesheet" href="../css/base.css">
@@ -16,7 +16,7 @@
   <!-- Top Demo Role Switcher -->
   <aside class="demo-role-bar">
     <div style="display: flex; align-items: center; gap: 0.6rem;">
-      <span class="badge badge-grade-a">PROTOTYPE PHASE 2</span>
+      <span class="badge badge-grade-a">RENTANY PHASE 2</span>
       <span style="color: var(--text-muted); font-size: 0.8rem;">Switch Portal View:</span>
     </div>
     <nav class="demo-role-pill-group">
@@ -30,8 +30,8 @@
   <header class="navbar">
     <div class="container nav-container">
       <a href="../../index.html" class="brand-logo">
-        <span>⚡</span>
-        <div>JABALPUR<span class="accent">RENT</span></div>
+        <span style="color: var(--brand-primary);">⚡</span>
+        <div>RENT<span class="accent">ANY</span></div>
       </a>
       <nav class="nav-links">
         <a href="../../index.html" class="nav-link">Home</a>
@@ -53,7 +53,7 @@
       </div>
 
       <!-- Filter Controls Bar -->
-      <div class="filter-bar">
+      <div class="filter-bar" style="border-color: var(--border-gold);">
         <div class="filter-chips" id="brand-chips">
           <button class="filter-chip active" data-brand="ALL">All Brands</button>
           <button class="filter-chip" data-brand="Apple">Apple iPhone</button>
@@ -62,7 +62,7 @@
           <button class="filter-chip" data-brand="OnePlus">OnePlus</button>
         </div>
 
-        <div class="search-input-box">
+        <div class="search-input-box" style="border-color: var(--border-gold);">
           <span>🔍</span>
           <input type="text" id="search-input" placeholder="Search iPhone, Ultra, 5G...">
         </div>
@@ -70,7 +70,7 @@
 
       <!-- Locality Sub-Filter -->
       <div class="flex items-center gap-2 mb-6 flex-wrap">
-        <span class="text-xs text-muted font-bold">JABALPUR LOCALITY:</span>
+        <span class="text-xs text-gold font-bold">JABALPUR LOCALITY:</span>
         <button class="filter-chip active" data-loc="ALL" onclick="filterLocality('ALL')">All Locations</button>
         <button class="filter-chip" data-loc="Sadar" onclick="filterLocality('Sadar')">Sadar Bazar</button>
         <button class="filter-chip" data-loc="Russell" onclick="filterLocality('Russell')">Russell Chowk</button>
@@ -106,7 +106,7 @@
 
       if (filtered.length === 0) {
         container.innerHTML = `
-          <div style="grid-column: 1 / -1; text-align: center; padding: 3rem; background: var(--bg-surface); border-radius: var(--radius-lg);">
+          <div style="grid-column: 1 / -1; text-align: center; padding: 3rem; background: var(--bg-surface); border-radius: var(--radius-lg); border: 1px dashed var(--border-gold);">
             <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🔍</div>
             <h4>No devices match your search query</h4>
             <p class="text-sm text-muted mt-1">Try resetting filters to All Brands or All Locations.</p>
@@ -118,7 +118,7 @@
       container.innerHTML = filtered.map(phone => `
         <article class="phone-card" id="catalog-${phone.id}">
           <div class="phone-card-image-box" style="background: ${phone.image_gradient};">
-            <span class="badge badge-${phone.badge_color} phone-card-tag">${phone.tag}</span>
+            <span class="badge badge-gold phone-card-tag">${phone.tag}</span>
             <span class="badge badge-battery phone-card-battery">🔋 ${phone.battery_health}% Health</span>
             <div style="font-size: 4.8rem;" class="animate-float">${phone.device_icon}</div>
           </div>

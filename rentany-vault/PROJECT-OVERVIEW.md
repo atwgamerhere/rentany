@@ -1,12 +1,14 @@
-# 📱 Jabalpur Rent — Project Overview
+# 📱 RENTANY — Project Overview
 
-> **Hyperlocal mobile-phone rental marketplace connecting verified local mobile shops in Jabalpur, Madhya Pradesh with trusted customers.**
+> **Brand**: **RENTANY** (`rentany.in`)  
+> **Brand Palette**: `#B21F3A` (Royal Crimson), `#EDC79B` (Champagne Gold), `#3D250B` (Deep Espresso)  
+> **Marketplace**: Hyperlocal mobile-phone rental marketplace connecting verified local mobile shops in Jabalpur, Madhya Pradesh with trusted customers.
 
 ---
 
 ## 1. Executive Summary
 
-**Jabalpur Rent** (domain brand: `rentany.in` / `jabalpurrent.in`) is a specialized two-sided rental marketplace operating in Jabalpur, Madhya Pradesh. The platform enables local multi-brand mobile phone retail shops to monetize idle display, demo, pre-owned, and premium inventory by renting them to thoroughly verified customers for durations ranging from 1 to 30 days.
+**RENTANY** (`rentany.in`) is a specialized two-sided rental marketplace operating in Jabalpur, Madhya Pradesh. The platform enables local multi-brand mobile phone retail shops to monetize idle display, demo, pre-owned, and premium inventory by renting them to thoroughly verified customers for durations ranging from 1 to 30 days.
 
 Customers obtain immediate access to high-end flagship smartphones (Apple iPhone, Samsung Galaxy S/Z Series, Google Pixel, OnePlus) for photography, travel, events, content creation, temporary phone replacement, or pre-purchase evaluation without bearing the full retail price.
 

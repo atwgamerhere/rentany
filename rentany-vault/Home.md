@@ -1,6 +1,8 @@
-# 🧭 Jabalpur Rent Knowledge Vault (Second Brain)
+# 🧭 RENTANY Knowledge Vault (Second Brain)
 
-Welcome to the central knowledge repository for **Jabalpur Rent**, a trusted hyperlocal mobile-phone rental marketplace for Jabalpur, Madhya Pradesh, India.
+Welcome to the central knowledge repository for **RENTANY** (`rentany.in`), the trusted smartphone rental marketplace for Jabalpur, Madhya Pradesh, India.
+
+> **Official Brand Colors**: `#B21F3A` (Royal Crimson), `#EDC79B` (Champagne Gold), `#3D250B` (Deep Espresso).
 
 ---
 

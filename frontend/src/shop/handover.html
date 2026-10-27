@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Counter Terminal (Pickup & Return OTP) — Jabalpur Rent</title>
+  <title>Counter Terminal (Pickup & Return OTP) — RENTANY</title>
   
   <link rel="stylesheet" href="../css/variables.css">
   <link rel="stylesheet" href="../css/base.css">
@@ -15,7 +15,7 @@
   <!-- Top Demo Role Switcher -->
   <aside class="demo-role-bar">
     <div style="display: flex; align-items: center; gap: 0.6rem;">
-      <span class="badge badge-grade-a">PROTOTYPE PHASE 2</span>
+      <span class="badge badge-grade-a">RENTANY PHASE 2</span>
       <span style="color: var(--text-muted); font-size: 0.8rem;">Switch Portal View:</span>
     </div>
     <nav class="demo-role-pill-group">
@@ -30,10 +30,10 @@
     <div class="container nav-container">
       <div class="flex items-center gap-3">
         <a href="./dashboard.html" class="brand-logo">
-          <span>🏪</span>
-          <div>APEX<span class="accent">MOBILE</span></div>
+          <span style="color: var(--brand-primary);">⚡</span>
+          <div>RENT<span class="accent">ANY</span> <span style="font-size: 0.9rem; color: var(--brand-gold);">COUNTER</span></div>
         </a>
-        <span class="badge badge-success">Counter Terminal</span>
+        <span class="badge badge-gold">Apex Mobile (Sadar)</span>
       </div>
 
       <nav class="nav-links">
@@ -69,36 +69,36 @@
       <div id="section-pickup" class="card card-static" style="border-color: var(--border-focus);">
         <div class="flex justify-between items-center mb-4">
           <div>
-            <span class="badge badge-warning">STEP 1: VERIFY 6-DIGIT PICKUP OTP</span>
-            <h3 style="margin-top: 0.3rem;">Validate Customer Handover Pass</h3>
+            <span class="badge badge-gold">STEP 1: VERIFY 6-DIGIT PICKUP OTP</span>
+            <h3 style="margin-top: 0.3rem; color: var(--text-gold);">Validate Customer Handover Pass</h3>
           </div>
           <span class="text-xs text-muted">Order #JR-2026-8921</span>
         </div>
 
         <!-- 6-Digit OTP Entry Input -->
-        <div class="form-group" style="background: var(--bg-surface); padding: 1.5rem; border-radius: var(--radius-lg); text-align: center; border: 1px dashed var(--brand-primary);">
-          <label class="form-label" style="font-size: 1rem; margin-bottom: 0.75rem;">
+        <div class="form-group" style="background: var(--bg-surface); padding: 1.5rem; border-radius: var(--radius-lg); text-align: center; border: 1px dashed var(--brand-gold);">
+          <label class="form-label" style="font-size: 1rem; margin-bottom: 0.75rem; color: var(--text-gold);">
             Ask the customer for their 6-digit Pickup OTP from their phone screen:
           </label>
           <div class="flex justify-center gap-2 mb-3">
-            <input type="text" class="form-control text-center font-mono font-bold" id="otp-input" value="849201" maxlength="6" style="font-size: 2rem; width: 220px; letter-spacing: 0.2em; color: var(--brand-primary);">
+            <input type="text" class="form-control text-center font-mono font-bold" id="otp-input" value="849201" maxlength="6" style="font-size: 2rem; width: 220px; letter-spacing: 0.2em; color: var(--brand-gold);">
           </div>
-          <button type="button" class="btn btn-outline-brand btn-sm" onclick="verifyPickupOtp()">
+          <button type="button" class="btn btn-gold btn-sm" onclick="verifyPickupOtp()">
             ✓ Validate OTP Code
           </button>
         </div>
 
         <!-- Verified Order & Customer Inspection Panel -->
         <div id="pickup-verified-panel" style="margin-top: 1.5rem;">
-          <div style="background: var(--bg-secondary); border-radius: var(--radius-lg); padding: 1.25rem; border: 1px solid var(--border-subtle); margin-bottom: 1.5rem;">
+          <div style="background: var(--bg-secondary); border-radius: var(--radius-lg); padding: 1.25rem; border: 1px solid var(--border-gold); margin-bottom: 1.5rem;">
             <div class="flex justify-between items-center mb-3">
               <div>
-                <span class="badge badge-success">OTP MATCHED & AUTHENTICATED</span>
-                <h4 style="margin-top: 0.3rem;">Aditya Mishra (DigiLocker Verified)</h4>
+                <span class="badge badge-gold">OTP MATCHED & AUTHENTICATED</span>
+                <h4 style="margin-top: 0.3rem; color: var(--text-primary);">Aditya Mishra (DigiLocker Verified)</h4>
               </div>
               <div class="text-right">
                 <span class="text-xs text-muted">Masked Aadhaar:</span>
-                <div class="font-mono text-sm font-bold">XXXX-XXXX-8921</div>
+                <div class="font-mono text-sm font-bold text-gold">XXXX-XXXX-8921</div>
               </div>
             </div>
 
@@ -109,7 +109,7 @@
               </div>
               <div>
                 <span class="text-muted block text-xs">Required Physical Serial:</span>
-                <span class="font-mono font-bold">F2LX9984Q6</span>
+                <span class="font-mono font-bold text-gold">F2LX9984Q6</span>
               </div>
               <div>
                 <span class="text-muted block text-xs">Rental Duration:</span>
@@ -117,35 +117,35 @@
               </div>
               <div>
                 <span class="text-muted block text-xs">Your Guaranteed 80% Payout:</span>
-                <span class="font-bold text-brand">₹3,360</span>
+                <span class="font-bold text-gold">₹3,360</span>
               </div>
             </div>
           </div>
 
           <!-- Physical Inspection Checklist -->
-          <h4>Physical Condition Verification Checklist</h4>
+          <h4 style="color: var(--text-gold);">Physical Condition Verification Checklist</h4>
           <p class="text-xs text-muted mb-3">Confirm each item before releasing the physical phone to the customer:</p>
 
           <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1.5rem;">
-            <label style="display: flex; items-center; gap: 0.75rem; background: var(--bg-surface); padding: 0.75rem 1rem; border-radius: var(--radius-md); cursor: pointer;">
+            <label style="display: flex; align-items: center; gap: 0.75rem; background: var(--bg-surface); padding: 0.75rem 1rem; border-radius: var(--radius-md); cursor: pointer; border: 1px solid var(--border-subtle);">
               <input type="checkbox" checked style="accent-color: var(--brand-primary); transform: scale(1.2);">
               <span>Dialed <strong>*#06#</strong> on screen: Physical IMEI matches database record</span>
             </label>
-            <label style="display: flex; items-center; gap: 0.75rem; background: var(--bg-surface); padding: 0.75rem 1rem; border-radius: var(--radius-md); cursor: pointer;">
+            <label style="display: flex; align-items: center; gap: 0.75rem; background: var(--bg-surface); padding: 0.75rem 1rem; border-radius: var(--radius-md); cursor: pointer; border: 1px solid var(--border-subtle);">
               <input type="checkbox" checked style="accent-color: var(--brand-primary); transform: scale(1.2);">
               <span>Inspected Screen & Back Glass: Zero cracks, confirmed Grade A condition</span>
             </label>
-            <label style="display: flex; items-center; gap: 0.75rem; background: var(--bg-surface); padding: 0.75rem 1rem; border-radius: var(--radius-md); cursor: pointer;">
+            <label style="display: flex; align-items: center; gap: 0.75rem; background: var(--bg-surface); padding: 0.75rem 1rem; border-radius: var(--radius-md); cursor: pointer; border: 1px solid var(--border-subtle);">
               <input type="checkbox" checked style="accent-color: var(--brand-primary); transform: scale(1.2);">
               <span>Audited Battery Health: Confirmed at 98% in iOS Settings</span>
             </label>
           </div>
 
           <!-- Simulated Camera Photo Audit -->
-          <div style="background: var(--bg-surface-elevated); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); margin-bottom: 1.5rem;">
+          <div style="background: var(--bg-surface-elevated); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-gold); margin-bottom: 1.5rem;">
             <div class="flex justify-between items-center mb-2">
-              <span class="font-bold text-sm">📸 Condition Photos (4 Angles Uploaded)</span>
-              <span class="badge badge-success">4 Photos Attached</span>
+              <span class="font-bold text-sm text-gold">📸 Condition Photos (4 Angles Uploaded)</span>
+              <span class="badge badge-gold">4 Photos Attached</span>
             </div>
             <div class="grid grid-cols-4 gap-2 text-center text-xs text-muted">
               <div style="background: var(--bg-surface); padding: 1rem; border-radius: var(--radius-sm); border: 1px dashed var(--border-subtle);">
@@ -173,50 +173,50 @@
       <!-- ======================================================================
            MODE 2: RETURN & DEPOSIT REFUND INSPECTION
            ====================================================================== -->
-      <div id="section-return" class="card card-static" style="border-color: var(--brand-cyan); display: none;">
+      <div id="section-return" class="card card-static" style="border-color: var(--border-gold); display: none;">
         <div class="flex justify-between items-center mb-4">
           <div>
-            <span class="badge badge-info">STEP 2: DEVICE RETURN & DEPOSIT SETTLEMENT</span>
-            <h3 style="margin-top: 0.3rem;">Process Device Return</h3>
+            <span class="badge badge-gold">STEP 2: DEVICE RETURN & DEPOSIT SETTLEMENT</span>
+            <h3 style="margin-top: 0.3rem; color: var(--text-gold);">Process Device Return</h3>
           </div>
           <span class="text-xs text-muted">Order #JR-2026-8874</span>
         </div>
 
-        <div style="background: var(--bg-surface); padding: 1.25rem; border-radius: var(--radius-lg); border: 1px solid var(--border-subtle); margin-bottom: 1.5rem;">
+        <div style="background: var(--bg-surface); padding: 1.25rem; border-radius: var(--radius-lg); border: 1px solid var(--border-gold); margin-bottom: 1.5rem;">
           <div class="flex justify-between items-center mb-2">
             <div>
-              <div class="font-bold">Galaxy S24 Ultra (256GB Titanium)</div>
+              <div class="font-bold text-primary">Galaxy S24 Ultra (256GB Titanium)</div>
               <p class="text-xs text-muted">Customer: Shreya Shrivastava (+91 94250 11984)</p>
             </div>
             <div class="text-right">
               <span class="text-xs text-muted">Escrow Deposit Held:</span>
-              <div class="font-mono font-bold text-brand text-lg">₹3,000.00</div>
+              <div class="font-mono font-bold text-gold text-lg">₹3,000.00</div>
             </div>
           </div>
         </div>
 
         <!-- Return Checklist (Founder Decision 2A: Exact deduction if damaged) -->
-        <h4>Return Inspection Checklist</h4>
+        <h4 style="color: var(--text-gold);">Return Inspection Checklist</h4>
         <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1.5rem; margin-top: 0.75rem;">
-          <label style="display: flex; items-center; gap: 0.75rem; background: var(--bg-surface); padding: 0.75rem 1rem; border-radius: var(--radius-md); cursor: pointer;">
+          <label style="display: flex; align-items: center; gap: 0.75rem; background: var(--bg-surface); padding: 0.75rem 1rem; border-radius: var(--radius-md); cursor: pointer; border: 1px solid var(--border-subtle);">
             <input type="checkbox" id="check-icloud" checked style="accent-color: var(--brand-primary); transform: scale(1.2);">
             <span><strong>Zero Account Lock</strong>: Customer has logged out of Google/Apple ID in front of me</span>
           </label>
-          <label style="display: flex; items-center; gap: 0.75rem; background: var(--bg-surface); padding: 0.75rem 1rem; border-radius: var(--radius-md); cursor: pointer;">
+          <label style="display: flex; align-items: center; gap: 0.75rem; background: var(--bg-surface); padding: 0.75rem 1rem; border-radius: var(--radius-md); cursor: pointer; border: 1px solid var(--border-subtle);">
             <input type="checkbox" id="check-screen" checked style="accent-color: var(--brand-primary); transform: scale(1.2);">
             <span><strong>Screen & Camera Clean</strong>: No cracked glass, scratches, or display lines</span>
           </label>
-          <label style="display: flex; items-center; gap: 0.75rem; background: var(--bg-surface); padding: 0.75rem 1rem; border-radius: var(--radius-md); cursor: pointer;">
+          <label style="display: flex; align-items: center; gap: 0.75rem; background: var(--bg-surface); padding: 0.75rem 1rem; border-radius: var(--radius-md); cursor: pointer; border: 1px solid var(--border-subtle);">
             <input type="checkbox" id="check-imei-return" checked style="accent-color: var(--brand-primary); transform: scale(1.2);">
             <span><strong>Hardware Match</strong>: On-screen IMEI matches Unit #R5CWA09923K</span>
           </label>
         </div>
 
         <!-- Customer Return OTP -->
-        <div class="form-group" style="background: var(--bg-surface); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
-          <label class="form-label">Enter 6-digit Return OTP provided by customer:</label>
+        <div class="form-group" style="background: var(--bg-surface); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-gold);">
+          <label class="form-label" style="color: var(--text-gold);">Enter 6-digit Return OTP provided by customer:</label>
           <div class="flex gap-2">
-            <input type="text" class="form-control font-mono font-bold" id="input-return-otp" value="610943" style="font-size: 1.3rem; width: 180px; letter-spacing: 0.15em;">
+            <input type="text" class="form-control font-mono font-bold" id="input-return-otp" value="610943" style="font-size: 1.3rem; width: 180px; letter-spacing: 0.15em; color: var(--brand-gold);">
             <button type="button" class="btn btn-secondary" onclick="showToast('Return OTP 610943 validated', 'success')">
               Validate OTP
             </button>
@@ -270,7 +270,7 @@
 
       setTimeout(() => {
         btn.innerHTML = '✓ Handover Completed! Status: In Customer Hands';
-        btn.style.background = 'var(--status-success)';
+        btn.style.background = 'var(--brand-primary)';
         showToast('🎉 Handover confirmed! Customer notified via SMS.', 'success');
       }, 1200);
     };
@@ -282,12 +282,11 @@
 
       setTimeout(() => {
         btn.innerHTML = '✓ Return Complete & ₹3,000 Refund Disbursed!';
-        btn.style.background = 'var(--status-success)';
+        btn.style.background = 'var(--brand-primary)';
         showToast('🎉 Return recorded! ₹3,000 refunded to customer. Shop payout credited.', 'success');
       }, 1500);
     };
 
-    // Check if query param specifies return mode
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.get('action') === 'return') {
       switchMode('return');

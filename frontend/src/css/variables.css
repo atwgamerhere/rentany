@@ -1,61 +1,72 @@
 /* ==============================================================================
-   JABALPUR RENT — DESIGN SYSTEM VARIABLES & TOKENS
-   Aesthetic: Ultra-premium dark theme with vivid emerald/teal escrow accents
+   RENTANY — OFFICIAL BRAND DESIGN SYSTEM
+   Palette:
+     - Primary Crimson:  #B21F3A  (hsl(349, 70%, 41%))
+     - Champagne Gold:   #EDC79B  (hsl(32, 69%, 77%))
+     - Deep Espresso:    #3D250B  (hsl(31, 69%, 14%))
    ============================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
 :root {
-  /* Color Palette (Tailored HSL) */
-  --bg-primary: hsl(224, 45%, 6%);
-  --bg-secondary: hsl(222, 40%, 10%);
-  --bg-surface: hsl(220, 36%, 13%);
-  --bg-surface-elevated: hsl(218, 32%, 17%);
-  --bg-glass: hsla(220, 36%, 14%, 0.75);
-  --bg-glass-card: hsla(220, 32%, 16%, 0.65);
-  --bg-glass-hover: hsla(220, 32%, 22%, 0.8);
+  /* Official Brand Core Colors */
+  --color-crimson: #B21F3A;
+  --color-gold: #EDC79B;
+  --color-espresso: #3D250B;
+
+  /* Backgrounds & Surfaces (Espresso Hierarchy) */
+  --bg-primary: hsl(30, 48%, 6%);             /* Deepest roasted obsidian espresso */
+  --bg-secondary: hsl(31, 55%, 9%);           /* Midnight mocha */
+  --bg-surface: #3D250B;                      /* Core Deep Espresso */
+  --bg-surface-elevated: hsl(31, 45%, 19%);   /* Elevated mocha card */
+  --bg-glass: hsla(31, 55%, 9%, 0.85);        /* Frosted espresso backdrop */
+  --bg-glass-card: hsla(31, 60%, 13%, 0.75);  /* Glassmorphism surface */
+  --bg-glass-hover: hsla(31, 50%, 21%, 0.85); /* Hover state */
 
   /* Borders & Dividers */
-  --border-subtle: hsla(220, 24%, 26%, 0.5);
-  --border-focus: hsla(160, 84%, 44%, 0.6);
-  --border-glass: hsla(220, 30%, 40%, 0.25);
-  --border-glow: hsla(160, 84%, 48%, 0.35);
+  --border-subtle: hsla(32, 40%, 30%, 0.45);
+  --border-focus: #B21F3A;
+  --border-gold: hsla(32, 69%, 77%, 0.35);
+  --border-glass: hsla(32, 50%, 40%, 0.25);
+  --border-glow: hsla(349, 70%, 41%, 0.45);
+  --border-gold-glow: hsla(32, 69%, 77%, 0.4);
 
-  /* Brand Accents (Trust Emerald & Tech Cyan) */
-  --brand-primary: hsl(160, 84%, 42%);
-  --brand-primary-hover: hsl(160, 84%, 48%);
-  --brand-primary-glow: hsla(160, 84%, 42%, 0.3);
-  --brand-cyan: hsl(175, 80%, 45%);
-  --brand-indigo: hsl(238, 87%, 67%);
-  --brand-purple: hsl(265, 85%, 65%);
+  /* Brand Accents */
+  --brand-primary: #B21F3A;
+  --brand-primary-hover: hsl(349, 75%, 48%);
+  --brand-primary-glow: hsla(349, 70%, 41%, 0.4);
+  --brand-gold: #EDC79B;
+  --brand-gold-hover: hsl(32, 75%, 83%);
+  --brand-gold-glow: hsla(32, 69%, 77%, 0.35);
 
   /* Status Colors */
-  --status-success: hsl(152, 76%, 42%);
-  --status-success-bg: hsla(152, 76%, 42%, 0.15);
-  --status-warning: hsl(38, 92%, 50%);
-  --status-warning-bg: hsla(38, 92%, 50%, 0.15);
-  --status-danger: hsl(354, 85%, 54%);
-  --status-danger-bg: hsla(354, 85%, 54%, 0.15);
-  --status-info: hsl(205, 87%, 55%);
-  --status-info-bg: hsla(205, 87%, 55%, 0.15);
+  --status-success: hsl(152, 72%, 44%);
+  --status-success-bg: hsla(152, 72%, 44%, 0.15);
+  --status-warning: #EDC79B;
+  --status-warning-bg: hsla(32, 69%, 77%, 0.15);
+  --status-danger: #B21F3A;
+  --status-danger-bg: hsla(349, 70%, 41%, 0.18);
+  --status-info: hsl(205, 85%, 60%);
+  --status-info-bg: hsla(205, 85%, 60%, 0.15);
 
   /* Typography */
   --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
 
-  /* Text Colors */
-  --text-primary: hsl(210, 40%, 98%);
-  --text-secondary: hsl(215, 20%, 75%);
-  --text-muted: hsl(217, 16%, 54%);
-  --text-brand: hsl(160, 84%, 45%);
-  --text-on-brand: hsl(224, 45%, 6%);
+  /* Text Colors (Ivory & Warm Sand) */
+  --text-primary: #FDF9F5;                    /* Warm ivory white */
+  --text-secondary: #D9C7B6;                  /* Soft champagne sand */
+  --text-muted: #9E8976;                      /* Subdued warm stone */
+  --text-gold: #EDC79B;                       /* Highlight gold */
+  --text-brand: #B21F3A;                      /* Accent Crimson */
+  --text-on-brand: #FFFFFF;                   /* Crisp white on crimson */
 
-  /* Elevation & Shadows */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 8px 24px -4px rgba(0, 0, 0, 0.45);
-  --shadow-lg: 0 16px 40px -8px rgba(0, 0, 0, 0.6);
-  --shadow-glow: 0 0 30px -5px hsla(160, 84%, 44%, 0.25);
-  --shadow-glow-cyan: 0 0 30px -5px hsla(175, 80%, 45%, 0.25);
+  /* Shadows & Radiant Glows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 24px -4px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 16px 40px -8px rgba(0, 0, 0, 0.75);
+  --shadow-glow: 0 0 32px -4px hsla(349, 70%, 41%, 0.35);
+  --shadow-gold-glow: 0 0 32px -4px hsla(32, 69%, 77%, 0.3);
 
   /* Radii */
   --radius-sm: 6px;

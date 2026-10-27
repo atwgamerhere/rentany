@@ -1,12 +1,13 @@
 /* ==============================================================================
-   JABALPUR RENT — COMPONENTS & UI PATTERNS
+   RENTANY — COMPONENTS & UI PATTERNS
+   Theme: Luxury Espresso (#3D250B), Warm Champagne Gold (#EDC79B) & Crimson (#B21F3A)
    ============================================================================== */
 
 /* ------------------------------------------------------------------------------
    1. Role & Environment Switcher Bar (Dev/Demo Bar)
    ------------------------------------------------------------------------------ */
 .demo-role-bar {
-  background: hsla(224, 45%, 4%, 0.95);
+  background: hsla(30, 48%, 4%, 0.95);
   border-bottom: 1px solid var(--border-subtle);
   padding: 0.5rem 1.5rem;
   font-size: 0.85rem;
@@ -36,7 +37,7 @@
 }
 
 .demo-role-pill:hover {
-  color: var(--text-primary);
+  color: var(--text-gold);
 }
 
 .demo-role-pill.active {
@@ -74,8 +75,8 @@
   align-items: center;
   gap: 0.6rem;
   font-family: var(--font-display);
-  font-size: 1.35rem;
-  font-weight: 800;
+  font-size: 1.45rem;
+  font-weight: 900;
   color: var(--text-primary);
   letter-spacing: -0.03em;
 }
@@ -85,13 +86,13 @@
 }
 
 .brand-badge {
-  background: var(--status-success-bg);
-  color: var(--brand-primary);
+  background: hsla(32, 69%, 77%, 0.12);
+  color: var(--brand-gold);
   font-size: 0.7rem;
   font-weight: 700;
-  padding: 0.15rem 0.5rem;
+  padding: 0.15rem 0.55rem;
   border-radius: var(--radius-pill);
-  border: 1px solid hsla(160, 84%, 42%, 0.3);
+  border: 1px solid var(--border-gold);
   text-transform: uppercase;
 }
 
@@ -110,7 +111,7 @@
 }
 
 .nav-link:hover, .nav-link.active {
-  color: var(--text-primary);
+  color: var(--brand-gold);
 }
 
 .nav-actions {
@@ -149,7 +150,22 @@
   background: var(--brand-primary-hover);
   color: var(--text-on-brand);
   transform: translateY(-1px);
-  box-shadow: 0 6px 20px var(--brand-primary-glow);
+  box-shadow: 0 6px 22px var(--brand-primary-glow);
+}
+
+.btn-gold {
+  background: var(--brand-gold);
+  color: var(--bg-surface);
+  border-color: var(--brand-gold);
+  font-weight: 700;
+  box-shadow: 0 4px 14px var(--brand-gold-glow);
+}
+
+.btn-gold:hover {
+  background: var(--brand-gold-hover);
+  color: var(--bg-surface);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px var(--brand-gold-glow);
 }
 
 .btn-secondary {
@@ -160,20 +176,20 @@
 
 .btn-secondary:hover {
   background: var(--bg-surface-elevated);
-  border-color: var(--border-glass);
-  color: var(--text-primary);
+  border-color: var(--border-gold);
+  color: var(--brand-gold);
   transform: translateY(-1px);
 }
 
-.btn-outline-brand {
+.btn-outline-gold {
   background: transparent;
-  color: var(--brand-primary);
-  border-color: var(--brand-primary);
+  color: var(--brand-gold);
+  border-color: var(--brand-gold);
 }
 
-.btn-outline-brand:hover {
-  background: var(--status-success-bg);
-  color: var(--brand-primary-hover);
+.btn-outline-gold:hover {
+  background: var(--status-warning-bg);
+  color: var(--brand-gold-hover);
 }
 
 .btn-sm {
@@ -205,39 +221,40 @@
   letter-spacing: 0.02em;
 }
 
+.badge-brand {
+  background: var(--status-danger-bg);
+  color: var(--brand-primary);
+  border: 1px solid var(--brand-primary);
+}
+
+.badge-gold {
+  background: var(--status-warning-bg);
+  color: var(--brand-gold);
+  border: 1px solid var(--border-gold);
+  font-weight: 700;
+}
+
 .badge-success {
   background: var(--status-success-bg);
   color: var(--status-success);
-  border: 1px solid hsla(152, 76%, 42%, 0.3);
-}
-
-.badge-warning {
-  background: var(--status-warning-bg);
-  color: var(--status-warning);
-  border: 1px solid hsla(38, 92%, 50%, 0.3);
-}
-
-.badge-info {
-  background: var(--status-info-bg);
-  color: var(--status-info);
-  border: 1px solid hsla(205, 87%, 55%, 0.3);
+  border: 1px solid hsla(152, 72%, 44%, 0.3);
 }
 
 .badge-outline {
   background: transparent;
-  color: var(--text-muted);
+  color: var(--text-secondary);
   border: 1px solid var(--border-subtle);
 }
 
 .badge-grade-a {
-  background: hsla(160, 84%, 42%, 0.15);
-  color: var(--brand-primary);
-  border: 1px solid var(--brand-primary);
+  background: hsla(32, 69%, 77%, 0.14);
+  color: var(--brand-gold);
+  border: 1px solid var(--brand-gold);
   font-weight: 700;
 }
 
 .badge-battery {
-  background: hsla(152, 76%, 42%, 0.12);
+  background: hsla(152, 72%, 44%, 0.12);
   color: var(--status-success);
   font-family: var(--font-display);
   font-weight: 700;
@@ -248,8 +265,8 @@
    ------------------------------------------------------------------------------ */
 .card {
   background: var(--bg-glass-card);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border: 1px solid var(--border-glass);
   border-radius: var(--radius-lg);
   padding: 1.5rem;
@@ -259,7 +276,7 @@
 }
 
 .card:hover {
-  border-color: var(--border-glow);
+  border-color: var(--border-gold-glow);
   transform: translateY(-3px);
   box-shadow: var(--shadow-md), var(--shadow-glow);
 }
@@ -284,13 +301,13 @@
 }
 
 .phone-card:hover {
-  border-color: var(--border-focus);
+  border-color: var(--brand-primary);
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg), var(--shadow-glow);
 }
 
 .phone-card-image-box {
-  background: linear-gradient(180deg, hsl(220, 32%, 18%) 0%, hsl(222, 40%, 10%) 100%);
+  background: linear-gradient(180deg, hsl(31, 45%, 19%) 0%, #3D250B 100%);
   padding: 2rem 1.5rem;
   display: flex;
   justify-content: center;
@@ -322,6 +339,7 @@
   font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 0.25rem;
+  color: var(--text-primary);
 }
 
 .phone-card-shop {
@@ -358,7 +376,7 @@
   font-family: var(--font-display);
   font-size: 1.45rem;
   font-weight: 800;
-  color: var(--text-primary);
+  color: var(--text-gold);
   line-height: 1;
 }
 
@@ -372,7 +390,7 @@
   font-size: 0.75rem;
   color: var(--brand-primary);
   font-weight: 600;
-  margin-top: 0.2rem;
+  margin-top: 0.25rem;
 }
 
 /* ------------------------------------------------------------------------------
@@ -398,7 +416,7 @@
 }
 
 .filter-chip {
-  padding: 0.4rem 0.9rem;
+  padding: 0.4rem 0.95rem;
   border-radius: var(--radius-pill);
   background: var(--bg-surface-elevated);
   border: 1px solid var(--border-subtle);
@@ -410,15 +428,15 @@
 }
 
 .filter-chip:hover {
-  color: var(--text-primary);
-  border-color: var(--border-glass);
+  color: var(--text-gold);
+  border-color: var(--border-gold);
 }
 
 .filter-chip.active {
   background: var(--brand-primary);
   color: var(--text-on-brand);
   border-color: var(--brand-primary);
-  box-shadow: 0 0 12px var(--brand-primary-glow);
+  box-shadow: 0 0 14px var(--brand-primary-glow);
 }
 
 .search-input-box {
@@ -477,7 +495,7 @@
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(10, 6, 2, 0.85);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   display: flex;
@@ -497,7 +515,7 @@
 
 .modal-container {
   background: var(--bg-secondary);
-  border: 1px solid var(--border-glass);
+  border: 1px solid var(--border-gold);
   border-radius: var(--radius-xl);
   max-width: 540px;
   width: 100%;
@@ -528,15 +546,15 @@
 }
 
 .modal-close-btn:hover {
-  color: var(--text-primary);
+  color: var(--text-gold);
 }
 
 /* ------------------------------------------------------------------------------
    10. Pickup OTP Presentation Card
    ------------------------------------------------------------------------------ */
 .otp-display-card {
-  background: linear-gradient(135deg, hsl(220, 32%, 18%) 0%, hsl(222, 40%, 11%) 100%);
-  border: 2px dashed var(--brand-primary);
+  background: linear-gradient(135deg, hsl(31, 55%, 15%) 0%, #3D250B 100%);
+  border: 2px dashed var(--brand-gold);
   border-radius: var(--radius-xl);
   padding: 2rem;
   text-align: center;
@@ -546,12 +564,12 @@
 
 .otp-code-digits {
   font-family: var(--font-display);
-  font-size: 3rem;
-  font-weight: 800;
-  color: var(--brand-primary);
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: var(--brand-gold);
   letter-spacing: 0.3em;
   margin: 0.75rem 0;
-  text-shadow: 0 0 15px var(--brand-primary-glow);
+  text-shadow: 0 0 18px var(--brand-gold-glow);
 }
 
 /* ------------------------------------------------------------------------------
@@ -571,7 +589,7 @@
 .toast {
   pointer-events: auto;
   background: var(--bg-surface-elevated);
-  border: 1px solid var(--border-subtle);
+  border: 1px solid var(--border-gold);
   border-left: 4px solid var(--brand-primary);
   color: var(--text-primary);
   padding: 0.9rem 1.4rem;
@@ -609,7 +627,7 @@
 
 .data-table th {
   background: var(--bg-surface);
-  color: var(--text-secondary);
+  color: var(--text-gold);
   font-weight: 600;
   padding: 0.9rem 1.25rem;
   border-bottom: 1px solid var(--border-subtle);

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administrator Control Center — Jabalpur Rent</title>
+  
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/utilities.css">
+</head>
+<body>
+
+  <!-- Top Demo Role Switcher -->
+  <aside class="demo-role-bar">
+    <div style="display: flex; align-items: center; gap: 0.6rem;">
+      <span class="badge badge-grade-a">PROTOTYPE PHASE 2</span>
+      <span style="color: var(--text-muted); font-size: 0.8rem;">Switch Portal View:</span>
+    </div>
+    <nav class="demo-role-pill-group">
+      <a href="../../index.html" class="demo-role-pill">📱 Customer App</a>
+      <a href="../shop/dashboard.html" class="demo-role-pill">🏪 Shop Partner Portal</a>
+      <a href="./dashboard.html" class="demo-role-pill active">🛡️ Platform Admin</a>
+    </nav>
+  </aside>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <div class="flex items-center gap-3">
+        <a href="./dashboard.html" class="brand-logo">
+          <span>🛡️</span>
+          <div>JABALPUR<span class="accent">ADMIN</span></div>
+        </a>
+        <span class="badge badge-grade-a">Platform Operator</span>
+      </div>
+
+      <nav class="nav-links">
+        <a href="./dashboard.html" class="nav-link active">Overview</a>
+        <a href="#shops-queue" class="nav-link">Shop Approvals (1)</a>
+        <a href="#kyc-queue" class="nav-link">KYC Audits</a>
+        <a href="#disputes-queue" class="nav-link">Disputes & Damages</a>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <span class="badge badge-outline font-mono">DB: Connected (Mumbai)</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="py-8">
+    <div class="container">
+      
+      <div class="flex justify-between items-center mb-6 flex-wrap gap-4">
+        <div>
+          <h2>Marketplace Operations & Governance</h2>
+          <p class="text-sm">Global platform health, shop verifications, escrow monitoring, and dispute settlements.</p>
+        </div>
+        <div class="flex gap-2">
+          <span class="badge badge-success">✓ 20% Take-Rate Active</span>
+          <span class="badge badge-info">✓ Razorpay + Setu Connected</span>
+        </div>
+      </div>
+
+      <!-- High-Level Financial & Operational KPIs -->
+      <div class="grid grid-cols-4 mb-8">
+        <div class="card card-static">
+          <span class="text-xs text-muted">Platform Gross Profit (20% Take-Rate)</span>
+          <div style="font-family: var(--font-display); font-size: 1.85rem; font-weight: 800; color: var(--brand-primary); margin: 0.3rem 0;">
+            ₹12,240
+          </div>
+          <span class="text-xs text-brand">From ₹61,200 gross rental volume</span>
+        </div>
+
+        <div class="card card-static">
+          <span class="text-xs text-muted">Escrow Deposits Currently Held</span>
+          <div style="font-family: var(--font-display); font-size: 1.85rem; font-weight: 800; color: var(--brand-cyan); margin: 0.3rem 0;">
+            ₹14,000
+          </div>
+          <span class="text-xs text-muted">Held safely in Razorpay escrow</span>
+        </div>
+
+        <div class="card card-static">
+          <span class="text-xs text-muted">Active Partner Shops</span>
+          <div style="font-family: var(--font-display); font-size: 1.85rem; font-weight: 800; color: var(--text-primary); margin: 0.3rem 0;">
+            4 Verified
+          </div>
+          <span class="text-xs text-muted">Sadar, Russell Chowk, Gorakhpur</span>
+        </div>
+
+        <div class="card card-static">
+          <span class="text-xs text-muted">Active Rentals on Streets</span>
+          <div style="font-family: var(--font-display); font-size: 1.85rem; font-weight: 800; color: var(--brand-indigo); margin: 0.3rem 0;">
+            5 Phones
+          </div>
+          <span class="text-xs text-muted">Zero overdue returns</span>
+        </div>
+      </div>
+
+      <!-- 1. SHOP PARTNER APPROVAL QUEUE -->
+      <section class="card card-static mb-8" id="shops-queue">
+        <div class="flex justify-between items-center mb-4">
+          <div>
+            <h3>Pending Shop Applications (1 Awaiting Review)</h3>
+            <p class="text-xs text-muted">Physical electronics shops in Jabalpur requesting to list rental phones</p>
+          </div>
+          <span class="badge badge-warning">Action Required</span>
+        </div>
+
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Shop Name & Location</th>
+                <th>Owner & Mobile</th>
+                <th>Trade License / GSTIN</th>
+                <th>Requested Inventory</th>
+                <th>Status</th>
+                <th>Arbitration</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr id="row-shop-pending">
+                <td>
+                  <div class="font-bold">Royal Mobile World</div>
+                  <div class="text-xs text-muted">📍 Gol Bazar, Ganjipura, Jabalpur</div>
+                </td>
+                <td>
+                  <div class="font-bold">Vikas Chourasia</div>
+                  <div class="text-xs text-muted">+91 97521 00982</div>
+                </td>
+                <td>
+                  <span class="badge badge-outline font-mono">23ABXPC9910F1Z4</span>
+                  <div class="text-xs text-muted">Gumasta #JBL-2024-810</div>
+                </td>
+                <td>4 iPhones (Display units)</td>
+                <td><span class="badge badge-warning">PENDING VERIFICATION</span></td>
+                <td>
+                  <div class="flex gap-2">
+                    <button class="btn btn-primary btn-sm" onclick="approveShop()">
+                      ✓ Approve Shop
+                    </button>
+                    <button class="btn btn-secondary btn-sm" onclick="rejectShop()">
+                      Reject
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 2. DISPUTE & DAMAGE ARBITRATION (Founder Decision 2A) -->
+      <section class="card card-static mb-8" id="disputes-queue">
+        <div class="flex justify-between items-center mb-4">
+          <div>
+            <h3>Damage & Deposit Settlement Claims</h3>
+            <p class="text-xs text-muted">Under Decision 2A: Authorized repair cost is deducted directly from deposit; remainder refunded</p>
+          </div>
+          <span class="badge badge-success">0 Open Disputes</span>
+        </div>
+
+        <div style="background: var(--bg-surface); padding: 1.25rem; border-radius: var(--radius-md); border: 1px dashed var(--border-subtle); text-align: center; color: var(--text-muted); font-size: 0.9rem;">
+          ✨ All active rentals in Jabalpur are operating cleanly. Zero damage disputes currently logged.
+        </div>
+      </section>
+
+      <!-- 3. PLATFORM AUDIT LOG -->
+      <section class="card card-static">
+        <div class="flex justify-between items-center mb-4">
+          <div>
+            <h3>Immutable System Audit Log</h3>
+            <p class="text-xs text-muted">Real-time tamper-evident events stream</p>
+          </div>
+          <span class="badge badge-outline">Live Feed</span>
+        </div>
+
+        <div style="font-family: monospace; font-size: 0.8rem; display: flex; flex-direction: column; gap: 0.5rem;">
+          <div style="background: var(--bg-surface); padding: 0.5rem 0.8rem; border-radius: var(--radius-sm); border-left: 3px solid var(--brand-primary);">
+            <span class="text-muted">[2026-10-27 21:28:44]</span> <strong>PAYMENT_VERIFIED:</strong> Booking #JR-2026-8921 captured ₹7,200 (Razorpay HMAC Valid). Pickup OTP issued.
+          </div>
+          <div style="background: var(--bg-surface); padding: 0.5rem 0.8rem; border-radius: var(--radius-sm); border-left: 3px solid var(--brand-cyan);">
+            <span class="text-muted">[2026-10-27 21:26:10]</span> <strong>DIGILOCKER_OKYC:</strong> Customer Aditya Mishra verified (Jabalpur PIN 482001). Masked Aadhaar: XXXX-XXXX-8921.
+          </div>
+          <div style="background: var(--bg-surface); padding: 0.5rem 0.8rem; border-radius: var(--radius-sm); border-left: 3px solid var(--status-warning);">
+            <span class="text-muted">[2026-10-27 20:55:01]</span> <strong>CONCURRENCY_GUARD:</strong> Overlapping booking attempt on Unit #F2LX99 safely blocked by PostgreSQL range exclusion constraint.
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script type="module">
+    import { showToast } from '../js/utils.js';
+
+    window.approveShop = () => {
+      const row = document.getElementById('row-shop-pending');
+      row.style.opacity = '0.5';
+      showToast('✓ Shop "Royal Mobile World" approved! Catalog publishing unlocked.', 'success');
+      setTimeout(() => {
+        row.innerHTML = `
+          <td colspan="6" style="text-align: center; color: var(--brand-primary); font-weight: bold; padding: 1.5rem;">
+            ✓ Shop Approved & Activated for Jabalpur Rentals
+          </td>
+        `;
+        row.style.opacity = '1';
+      }, 500);
+    };
+
+    window.rejectShop = () => {
+      const row = document.getElementById('row-shop-pending');
+      showToast('Shop application rejected.', 'warning');
+      row.remove();
+    };
+  </script>
+</body>
+</html>

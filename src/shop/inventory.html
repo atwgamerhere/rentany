@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory Management — Apex Mobile Gallery | Jabalpur Rent</title>
+  
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/utilities.css">
+</head>
+<body>
+
+  <!-- Top Demo Role Switcher -->
+  <aside class="demo-role-bar">
+    <div style="display: flex; align-items: center; gap: 0.6rem;">
+      <span class="badge badge-grade-a">PROTOTYPE PHASE 2</span>
+      <span style="color: var(--text-muted); font-size: 0.8rem;">Switch Portal View:</span>
+    </div>
+    <nav class="demo-role-pill-group">
+      <a href="../../index.html" class="demo-role-pill">📱 Customer App</a>
+      <a href="./dashboard.html" class="demo-role-pill active">🏪 Shop Partner Portal</a>
+      <a href="../admin/dashboard.html" class="demo-role-pill">🛡️ Platform Admin</a>
+    </nav>
+  </aside>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <div class="flex items-center gap-3">
+        <a href="./dashboard.html" class="brand-logo">
+          <span>🏪</span>
+          <div>APEX<span class="accent">MOBILE</span></div>
+        </a>
+        <span class="badge badge-success">Sadar Bazar</span>
+      </div>
+
+      <nav class="nav-links">
+        <a href="./dashboard.html" class="nav-link">Dashboard</a>
+        <a href="./inventory.html" class="nav-link active">Inventory</a>
+        <a href="./handover.html" class="nav-link">Counter Terminal</a>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <button class="btn btn-primary btn-sm" onclick="openAddDeviceModal()">
+          + Add Physical Phone
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="py-8">
+    <div class="container">
+      
+      <div class="flex justify-between items-center mb-6 flex-wrap gap-4">
+        <div>
+          <h2>Physical Phone Inventory</h2>
+          <p class="text-sm">Manage exact hardware units tracked by serial number, IMEI hash, and condition grading.</p>
+        </div>
+        <button class="btn btn-primary" onclick="openAddDeviceModal()" id="btn-add-device">
+          + Add Phone to Catalog
+        </button>
+      </div>
+
+      <!-- Inventory Table -->
+      <div class="card card-static mb-8">
+        <div class="table-responsive">
+          <table class="data-table" id="inventory-table">
+            <thead>
+              <tr>
+                <th>Hardware & Model</th>
+                <th>Serial & IMEI Hash</th>
+                <th>Battery Health</th>
+                <th>Condition</th>
+                <th>Daily Rate</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="inventory-tbody">
+              <!-- Rendered via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Add Device Modal -->
+  <div class="modal-overlay" id="modal-add-device">
+    <div class="modal-container" style="max-width: 580px;">
+      <div class="modal-header">
+        <h3>Add Physical Smartphone Unit</h3>
+        <button class="modal-close-btn" onclick="closeAddDeviceModal()">&times;</button>
+      </div>
+
+      <form id="form-add-device" onsubmit="event.preventDefault(); saveNewDevice();">
+        <div class="grid grid-cols-2 gap-4">
+          <div class="form-group">
+            <label class="form-label">Brand</label>
+            <select class="form-control" id="new-brand">
+              <option value="Apple">Apple</option>
+              <option value="Samsung">Samsung</option>
+              <option value="Google">Google</option>
+              <option value="OnePlus">OnePlus</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Model Name</label>
+            <input type="text" class="form-control" id="new-model" value="iPhone 15 Pro" required>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div class="form-group">
+            <label class="form-label">Storage Capacity</label>
+            <select class="form-control" id="new-storage">
+              <option value="128GB">128GB</option>
+              <option value="256GB" selected>256GB</option>
+              <option value="512GB">512GB</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Color / Finish</label>
+            <input type="text" class="form-control" id="new-color" value="Black Titanium" required>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div class="form-group">
+            <label class="form-label">Hardware Serial Number</label>
+            <input type="text" class="form-control font-mono" id="new-serial" value="C39LX89192M" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Physical IMEI (15 Digits)</label>
+            <input type="text" class="form-control font-mono" id="new-imei" value="354891092837194" required>
+            <span class="text-xs text-muted">Hashed with SHA-256 upon saving</span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-3">
+          <div class="form-group">
+            <label class="form-label">Battery Health</label>
+            <input type="number" class="form-control font-bold" id="new-battery" value="98" min="50" max="100" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Condition Grade</label>
+            <select class="form-control" id="new-grade">
+              <option value="GRADE_A">Grade A (Mint)</option>
+              <option value="GRADE_B">Grade B (Minor wear)</option>
+              <option value="GRADE_C">Grade C (Visible use)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Daily Rate (₹)</label>
+            <input type="number" class="form-control font-bold text-brand" id="new-rate" value="1200" required>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block mt-4" id="btn-save-device">
+          Save Device to Store Inventory
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script type="module">
+    import { MOCK_PHONES } from '../js/mock-data.js';
+    import { formatINR, showToast } from '../js/utils.js';
+
+    let inventory = [...MOCK_PHONES];
+
+    function renderTable() {
+      const tbody = document.getElementById('inventory-tbody');
+      tbody.innerHTML = inventory.map(item => `
+        <tr id="row-${item.id}">
+          <td>
+            <div class="font-bold">${item.brand} ${item.model}</div>
+            <div class="text-xs text-muted">${item.storage} • ${item.color}</div>
+          </td>
+          <td>
+            <div class="font-mono text-xs font-bold">${item.serial_number}</div>
+            <div class="font-mono text-xs text-muted" title="${item.imei_hash}">${item.imei_hash.slice(0, 16)}...</div>
+          </td>
+          <td>
+            <span class="badge badge-battery">🔋 ${item.battery_health}%</span>
+          </td>
+          <td>
+            <span class="badge badge-${item.condition_grade === 'GRADE_A' ? 'grade-a' : 'warning'}">
+              ${item.condition_grade}
+            </span>
+          </td>
+          <td class="font-mono font-bold text-brand">
+            ${formatINR(item.daily_rate)}/d
+          </td>
+          <td>
+            <span class="badge badge-${item.status === 'AVAILABLE' ? 'success' : item.status === 'RESERVED' ? 'warning' : 'info'}">
+              ${item.status}
+            </span>
+          </td>
+          <td>
+            <div class="flex gap-2">
+              <button class="btn btn-secondary btn-sm" onclick="toggleStatus('${item.id}')">
+                ${item.status === 'AVAILABLE' ? 'Set Maintenance' : 'Set Available'}
+              </button>
+            </div>
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    window.openAddDeviceModal = () => document.getElementById('modal-add-device').classList.add('active');
+    window.closeAddDeviceModal = () => document.getElementById('modal-add-device').classList.remove('active');
+
+    window.toggleStatus = (id) => {
+      const item = inventory.find(i => i.id === id);
+      if (item) {
+        item.status = item.status === 'AVAILABLE' ? 'MAINTENANCE' : 'AVAILABLE';
+        renderTable();
+        showToast(`Status updated to ${item.status}`, 'info');
+      }
+    };
+
+    window.saveNewDevice = () => {
+      const brand = document.getElementById('new-brand').value;
+      const model = document.getElementById('new-model').value;
+      const storage = document.getElementById('new-storage').value;
+      const color = document.getElementById('new-color').value;
+      const serial = document.getElementById('new-serial').value;
+      const battery = parseInt(document.getElementById('new-battery').value, 10);
+      const grade = document.getElementById('new-grade').value;
+      const rate = parseInt(document.getElementById('new-rate').value, 10);
+
+      const newPhone = {
+        id: `phone-custom-${Date.now()}`,
+        brand,
+        model,
+        storage,
+        color,
+        serial_number: serial,
+        imei_hash: "9821af09bc192801...",
+        battery_health: battery,
+        condition_grade: grade,
+        daily_rate: rate,
+        status: "AVAILABLE",
+        shop_name: "Apex Mobile Gallery (Sadar)"
+      };
+
+      inventory.unshift(newPhone);
+      renderTable();
+      closeAddDeviceModal();
+      showToast(`Phone ${brand} ${model} added to live inventory!`, 'success');
+    };
+
+    renderTable();
+  </script>
+</body>
+</html>

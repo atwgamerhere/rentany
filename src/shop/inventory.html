@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inventory Management — Apex Mobile Gallery | Jabalpur Rent</title>
+  <title>Inventory Management — RENTANY</title>
   
   <link rel="stylesheet" href="../css/variables.css">
   <link rel="stylesheet" href="../css/base.css">
@@ -15,7 +15,7 @@
   <!-- Top Demo Role Switcher -->
   <aside class="demo-role-bar">
     <div style="display: flex; align-items: center; gap: 0.6rem;">
-      <span class="badge badge-grade-a">PROTOTYPE PHASE 2</span>
+      <span class="badge badge-grade-a">RENTANY PHASE 2</span>
       <span style="color: var(--text-muted); font-size: 0.8rem;">Switch Portal View:</span>
     </div>
     <nav class="demo-role-pill-group">
@@ -30,10 +30,10 @@
     <div class="container nav-container">
       <div class="flex items-center gap-3">
         <a href="./dashboard.html" class="brand-logo">
-          <span>🏪</span>
-          <div>APEX<span class="accent">MOBILE</span></div>
+          <span style="color: var(--brand-primary);">⚡</span>
+          <div>RENT<span class="accent">ANY</span> <span style="font-size: 0.9rem; color: var(--brand-gold);">PARTNER</span></div>
         </a>
-        <span class="badge badge-success">Sadar Bazar</span>
+        <span class="badge badge-gold">Apex Mobile (Sadar)</span>
       </div>
 
       <nav class="nav-links">
@@ -64,7 +64,7 @@
       </div>
 
       <!-- Inventory Table -->
-      <div class="card card-static mb-8">
+      <div class="card card-static mb-8" style="border-color: var(--border-gold);">
         <div class="table-responsive">
           <table class="data-table" id="inventory-table">
             <thead>
@@ -90,9 +90,9 @@
 
   <!-- Add Device Modal -->
   <div class="modal-overlay" id="modal-add-device">
-    <div class="modal-container" style="max-width: 580px;">
+    <div class="modal-container" style="max-width: 580px; border-color: var(--border-gold);">
       <div class="modal-header">
-        <h3>Add Physical Smartphone Unit</h3>
+        <h3 style="color: var(--text-gold);">Add Physical Smartphone Unit</h3>
         <button class="modal-close-btn" onclick="closeAddDeviceModal()">&times;</button>
       </div>
 
@@ -155,7 +155,7 @@
           </div>
           <div class="form-group">
             <label class="form-label">Daily Rate (₹)</label>
-            <input type="number" class="form-control font-bold text-brand" id="new-rate" value="1200" required>
+            <input type="number" class="form-control font-bold text-gold" id="new-rate" value="1200" required>
           </div>
         </div>
 
@@ -177,26 +177,26 @@
       tbody.innerHTML = inventory.map(item => `
         <tr id="row-${item.id}">
           <td>
-            <div class="font-bold">${item.brand} ${item.model}</div>
+            <div class="font-bold text-primary">${item.brand} ${item.model}</div>
             <div class="text-xs text-muted">${item.storage} • ${item.color}</div>
           </td>
           <td>
-            <div class="font-mono text-xs font-bold">${item.serial_number}</div>
+            <div class="font-mono text-xs font-bold text-gold">${item.serial_number}</div>
             <div class="font-mono text-xs text-muted" title="${item.imei_hash}">${item.imei_hash.slice(0, 16)}...</div>
           </td>
           <td>
             <span class="badge badge-battery">🔋 ${item.battery_health}%</span>
           </td>
           <td>
-            <span class="badge badge-${item.condition_grade === 'GRADE_A' ? 'grade-a' : 'warning'}">
+            <span class="badge badge-gold">
               ${item.condition_grade}
             </span>
           </td>
-          <td class="font-mono font-bold text-brand">
+          <td class="font-mono font-bold text-gold">
             ${formatINR(item.daily_rate)}/d
           </td>
           <td>
-            <span class="badge badge-${item.status === 'AVAILABLE' ? 'success' : item.status === 'RESERVED' ? 'warning' : 'info'}">
+            <span class="badge badge-${item.status === 'AVAILABLE' ? 'gold' : item.status === 'RESERVED' ? 'brand' : 'outline'}">
               ${item.status}
             </span>
           </td>
@@ -251,7 +251,7 @@
       inventory.unshift(newPhone);
       renderTable();
       closeAddDeviceModal();
-      showToast(`Phone ${brand} ${model} added to live inventory!`, 'success');
+      showToast(`Phone ${brand} ${model} added to store inventory!`, 'success');
     };
 
     renderTable();

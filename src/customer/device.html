@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reserve Smartphone — Jabalpur Rent</title>
+  <title>Reserve Smartphone — RENTANY</title>
   
   <link rel="stylesheet" href="../css/variables.css">
   <link rel="stylesheet" href="../css/base.css">
@@ -15,7 +15,7 @@
   <!-- Top Demo Role Switcher -->
   <aside class="demo-role-bar">
     <div style="display: flex; align-items: center; gap: 0.6rem;">
-      <span class="badge badge-grade-a">PROTOTYPE PHASE 2</span>
+      <span class="badge badge-grade-a">RENTANY PHASE 2</span>
       <span style="color: var(--text-muted); font-size: 0.8rem;">Switch Portal View:</span>
     </div>
     <nav class="demo-role-pill-group">
@@ -29,8 +29,8 @@
   <header class="navbar">
     <div class="container nav-container">
       <a href="../../index.html" class="brand-logo">
-        <span>⚡</span>
-        <div>JABALPUR<span class="accent">RENT</span></div>
+        <span style="color: var(--brand-primary);">⚡</span>
+        <div>RENT<span class="accent">ANY</span></div>
       </a>
       <nav class="nav-links">
         <a href="../../index.html" class="nav-link">&larr; Back to Catalog</a>
@@ -46,10 +46,10 @@
         
         <!-- Left: Device Showcase & Specs -->
         <div>
-          <div class="card" style="padding: 2.5rem; text-align: center; margin-bottom: 1.5rem; background: var(--bg-surface);" id="device-visual-card">
+          <div class="card" style="padding: 2.5rem; text-align: center; margin-bottom: 1.5rem; background: var(--bg-surface); border-color: var(--border-gold);" id="device-visual-card">
             <div style="font-size: 7rem;" class="animate-float" id="device-icon">📱</div>
             <div class="mt-4 flex justify-center gap-2" id="device-badges">
-              <span class="badge badge-success" id="badge-condition">Grade A Mint</span>
+              <span class="badge badge-gold" id="badge-condition">Grade A Mint</span>
               <span class="badge badge-battery" id="badge-battery">🔋 98% Battery Health</span>
               <span class="badge badge-outline" id="badge-imei">IMEI Blacklist Cleared</span>
             </div>
@@ -57,7 +57,7 @@
 
           <!-- Specifications List -->
           <div class="card card-static">
-            <h3 style="margin-bottom: 1rem;">Hardware & Condition Details</h3>
+            <h3 style="margin-bottom: 1rem; color: var(--text-gold);">Hardware & Condition Details</h3>
             <div style="display: flex; flex-direction: column; gap: 0.8rem; font-size: 0.925rem;">
               <div class="flex justify-between" style="border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.5rem;">
                 <span class="text-muted">Storage Capacity:</span>
@@ -77,17 +77,17 @@
               </div>
               <div class="flex justify-between">
                 <span class="text-muted">Physical Pickup Store:</span>
-                <span class="font-bold text-brand" id="spec-shop">Apex Mobile Gallery (Sadar)</span>
+                <span class="font-bold text-gold" id="spec-shop">Apex Mobile Gallery (Sadar)</span>
               </div>
             </div>
           </div>
 
           <!-- Pickup Shop Location Card -->
-          <div class="card card-static mt-4" style="background: var(--bg-surface-elevated);">
+          <div class="card card-static mt-4" style="background: var(--bg-surface-elevated); border-color: var(--border-gold);">
             <div class="flex items-center gap-3">
               <span style="font-size: 2rem;">🏪</span>
               <div>
-                <h4 id="shop-title">Apex Mobile Gallery</h4>
+                <h4 id="shop-title" style="color: var(--text-gold);">Apex Mobile Gallery</h4>
                 <p class="text-xs text-muted" id="shop-address">42, Residency Road, Sadar Bazar, Cantt, Jabalpur, MP 482001</p>
                 <div class="text-xs text-brand font-bold mt-1">Open 10:30 AM - 9:00 PM • Pickup OTP Required at Store</div>
               </div>
@@ -99,8 +99,8 @@
         <div>
           <div class="card" style="border-color: var(--border-focus); box-shadow: var(--shadow-lg);">
             <div style="border-bottom: 1px solid var(--border-subtle); padding-bottom: 1rem; margin-bottom: 1.5rem;">
-              <span class="badge badge-info" id="device-tag">Trending Flagship</span>
-              <h2 style="margin-top: 0.4rem;" id="device-name">Apple iPhone 15 Pro Max</h2>
+              <span class="badge badge-gold" id="device-tag">Trending Flagship</span>
+              <h2 style="margin-top: 0.4rem; color: var(--text-primary);" id="device-name">Apple iPhone 15 Pro Max</h2>
               <div class="flex items-center gap-2 mt-1">
                 <span class="phone-price-rate" id="price-per-day">₹1,400</span>
                 <span class="text-sm text-muted">/ day</span>
@@ -114,7 +114,7 @@
               <div class="form-group">
                 <div class="flex justify-between items-center mb-2">
                   <label class="form-label" style="margin: 0;">Rental Duration (Days)</label>
-                  <span class="badge badge-success" id="duration-badge">3 Days (10% Off Applied)</span>
+                  <span class="badge badge-gold" id="duration-badge">3 Days (10% Off Applied)</span>
                 </div>
                 <div class="flex gap-2 mb-2">
                   <button type="button" class="filter-chip" data-days="1" onclick="selectDuration(1)">1 Day</button>
@@ -125,14 +125,14 @@
                 <input type="range" class="form-control" id="days-slider" min="1" max="30" value="3" oninput="onSliderChange(this.value)" style="accent-color: var(--brand-primary); cursor: pointer;">
                 <div class="flex justify-between text-xs text-muted mt-1">
                   <span>1 Day (Quick event)</span>
-                  <span id="slider-days-label">3 Days selected</span>
+                  <span id="slider-days-label" class="text-gold font-bold">3 Days selected</span>
                   <span>30 Days (Long-term)</span>
                 </div>
               </div>
 
               <!-- 2. Jabalpur Residency Tier Toggle (Founder Decision 1B) -->
-              <div class="form-group" style="background: var(--bg-surface); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
-                <label class="form-label">Customer Residency Tier (DigiLocker KYC)</label>
+              <div class="form-group" style="background: var(--bg-surface); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-gold);">
+                <label class="form-label" style="color: var(--text-gold);">Customer Residency Tier (DigiLocker KYC)</label>
                 <div class="flex gap-4 mt-2">
                   <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-size: 0.9rem;">
                     <input type="radio" name="residency-tier" value="resident" checked onchange="toggleResidency(true)" style="accent-color: var(--brand-primary);">
@@ -150,36 +150,36 @@
 
               <!-- 3. Transparent Itemized Price Breakdown -->
               <div style="background: var(--bg-secondary); border-radius: var(--radius-lg); padding: 1.25rem; margin-bottom: 1.5rem; border: 1px solid var(--border-subtle);">
-                <h4 style="font-size: 0.95rem; margin-bottom: 0.85rem; color: var(--text-primary);">Order Summary & Escrow Breakdown</h4>
+                <h4 style="font-size: 0.95rem; margin-bottom: 0.85rem; color: var(--text-gold);">Order Summary & Escrow Breakdown</h4>
                 
                 <div style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem;">
                   <div class="flex justify-between">
                     <span class="text-muted" id="breakdown-base-label">Rental (₹1,400 x 3 days):</span>
                     <span class="font-mono" id="breakdown-raw-rent">₹4,200</span>
                   </div>
-                  <div class="flex justify-between" id="row-discount" style="color: var(--brand-primary);">
+                  <div class="flex justify-between" id="row-discount" style="color: var(--brand-gold);">
                     <span>Duration Discount (10%):</span>
                     <span class="font-mono" id="breakdown-discount">-₹420</span>
                   </div>
                   <div class="flex justify-between" style="border-top: 1px solid var(--border-subtle); padding-top: 0.5rem;">
                     <span class="text-muted">Net Rental Fee:</span>
-                    <span class="font-bold font-mono" id="breakdown-net-rent">₹3,780</span>
+                    <span class="font-bold font-mono text-gold" id="breakdown-net-rent">₹3,780</span>
                   </div>
-                  <div class="flex justify-between" style="background: hsla(160, 84%, 42%, 0.1); padding: 0.4rem 0.6rem; border-radius: var(--radius-sm); border: 1px dashed var(--brand-primary);">
-                    <span style="color: var(--brand-primary); font-weight: 600;">100% Refundable Security Deposit:</span>
-                    <span class="font-bold font-mono text-brand" id="breakdown-deposit">₹3,000</span>
+                  <div class="flex justify-between" style="background: hsla(32, 69%, 77%, 0.1); padding: 0.4rem 0.6rem; border-radius: var(--radius-sm); border: 1px dashed var(--brand-gold);">
+                    <span style="color: var(--brand-gold); font-weight: 600;">100% Refundable Security Deposit:</span>
+                    <span class="font-bold font-mono text-gold" id="breakdown-deposit">₹3,000</span>
                   </div>
                 </div>
 
                 <div class="flex justify-between items-center" style="border-top: 2px solid var(--border-glass); margin-top: 1rem; padding-top: 1rem;">
                   <div>
                     <div class="text-xs text-muted">Total Payable Today:</div>
-                    <div style="font-family: var(--font-display); font-size: 1.6rem; font-weight: 800; color: var(--text-primary);" id="breakdown-total">
+                    <div style="font-family: var(--font-display); font-size: 1.6rem; font-weight: 900; color: var(--text-primary);" id="breakdown-total">
                       ₹6,780
                     </div>
                   </div>
                   <div class="text-right">
-                    <span class="badge badge-success">Deposit Refunded on Return</span>
+                    <span class="badge badge-gold">Deposit Refunded on Return</span>
                   </div>
                 </div>
               </div>
@@ -205,7 +205,6 @@
     import { MOCK_PHONES, MOCK_SHOPS } from '../js/mock-data.js';
     import { formatINR, calculateQuote, showToast } from '../js/utils.js';
 
-    // Parse URL parameter
     const urlParams = new URLSearchParams(window.location.search);
     const phoneId = urlParams.get('id') || 'phone-ip15pm-01';
     const phone = MOCK_PHONES.find(p => p.id === phoneId) || MOCK_PHONES[0];
@@ -232,11 +231,10 @@
       document.getElementById('slider-days-label').innerText = `${quote.days} Days selected`;
       document.getElementById('days-slider').value = quote.days;
 
-      // Discount badge
       const badge = document.getElementById('duration-badge');
       if (quote.discountPercent > 0) {
         badge.innerText = `${quote.days} Days (${quote.discountPercent}% Off Applied)`;
-        badge.className = 'badge badge-success';
+        badge.className = 'badge badge-gold';
         document.getElementById('row-discount').style.display = 'flex';
         document.getElementById('breakdown-discount').innerText = `-${formatINR(quote.discountAmount)}`;
       } else {
@@ -285,7 +283,6 @@
       window.location.href = checkoutUrl;
     };
 
-    // Initial calculation
     updateCalculations();
   </script>
 </body>

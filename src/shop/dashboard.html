@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shop Partner Control Center — Jabalpur Rent</title>
+  <title>Shop Partner Control Center — RENTANY</title>
   
   <link rel="stylesheet" href="../css/variables.css">
   <link rel="stylesheet" href="../css/base.css">
@@ -15,7 +15,7 @@
   <!-- Top Demo Role Switcher -->
   <aside class="demo-role-bar">
     <div style="display: flex; align-items: center; gap: 0.6rem;">
-      <span class="badge badge-grade-a">PROTOTYPE PHASE 2</span>
+      <span class="badge badge-grade-a">RENTANY PHASE 2</span>
       <span style="color: var(--text-muted); font-size: 0.8rem;">Switch Portal View:</span>
     </div>
     <nav class="demo-role-pill-group">
@@ -30,21 +30,21 @@
     <div class="container nav-container">
       <div class="flex items-center gap-3">
         <a href="./dashboard.html" class="brand-logo">
-          <span>🏪</span>
-          <div>APEX<span class="accent">MOBILE</span></div>
+          <span style="color: var(--brand-primary);">⚡</span>
+          <div>RENT<span class="accent">ANY</span> <span style="font-size: 0.9rem; color: var(--brand-gold);">PARTNER</span></div>
         </a>
-        <span class="badge badge-success">Sadar Bazar, Jabalpur</span>
+        <span class="badge badge-gold">Apex Mobile (Sadar Bazar)</span>
       </div>
 
       <nav class="nav-links">
         <a href="./dashboard.html" class="nav-link active">Dashboard</a>
-        <a href="./inventory.html" class="nav-link">Inventory (6 Phones)</a>
+        <a href="./inventory.html" class="nav-link">Inventory</a>
         <a href="./handover.html" class="nav-link">Counter Terminal (OTP)</a>
       </nav>
 
       <div class="flex items-center gap-2">
         <a href="./handover.html" class="btn btn-primary btn-sm">
-          ⚡ Open Handover Terminal
+          ⚡ Open Counter Terminal
         </a>
       </div>
     </div>
@@ -57,19 +57,19 @@
       <div class="flex justify-between items-center mb-6 flex-wrap gap-4">
         <div>
           <h2>Partner Dashboard — Apex Mobile Gallery</h2>
-          <p class="text-sm">Owner: Rajesh Sahu • GSTIN: 23AABCP8810K1ZZ • Sadar Bazar, Cantt, Jabalpur</p>
+          <p class="text-sm">Store Owner: Rajesh Sahu • GSTIN: 23AABCP8810K1ZZ • Sadar Bazar, Cantt, Jabalpur</p>
         </div>
         <div class="flex gap-2">
           <a href="./inventory.html" class="btn btn-secondary btn-sm">+ Add New Phone</a>
-          <a href="./handover.html" class="btn btn-outline-brand btn-sm">Verify Pickup / Return OTP</a>
+          <a href="./handover.html" class="btn btn-outline-gold btn-sm">Verify Pickup / Return OTP</a>
         </div>
       </div>
 
       <!-- Financial & Operations Metrics Strip -->
       <div class="grid grid-cols-4 mb-8">
-        <div class="card card-static">
+        <div class="card card-static" style="border-color: var(--border-gold);">
           <span class="text-xs text-muted">Shop Revenue (80% Payout Share)</span>
-          <div style="font-family: var(--font-display); font-size: 1.85rem; font-weight: 800; color: var(--brand-primary); margin: 0.3rem 0;">
+          <div style="font-family: var(--font-display); font-size: 1.85rem; font-weight: 800; color: var(--brand-gold); margin: 0.3rem 0;">
             ₹48,920
           </div>
           <span class="text-xs text-brand">✓ Deposited weekly to SBI A/c</span>
@@ -85,15 +85,15 @@
 
         <div class="card card-static">
           <span class="text-xs text-muted">Pickups Due Today</span>
-          <div style="font-family: var(--font-display); font-size: 1.85rem; font-weight: 800; color: var(--status-warning); margin: 0.3rem 0;">
+          <div style="font-family: var(--font-display); font-size: 1.85rem; font-weight: 800; color: var(--brand-primary); margin: 0.3rem 0;">
             1 Customer
           </div>
-          <span class="text-xs text-warning">Awaiting in-person OTP</span>
+          <span class="text-xs text-brand font-bold">Awaiting in-person OTP</span>
         </div>
 
         <div class="card card-static">
           <span class="text-xs text-muted">Hardware Utilization Rate</span>
-          <div style="font-family: var(--font-display); font-size: 1.85rem; font-weight: 800; color: var(--brand-cyan); margin: 0.3rem 0;">
+          <div style="font-family: var(--font-display); font-size: 1.85rem; font-weight: 800; color: var(--brand-gold); margin: 0.3rem 0;">
             83.3%
           </div>
           <span class="text-xs text-muted">5 of 6 phones deployed</span>
@@ -101,10 +101,10 @@
       </div>
 
       <!-- Active Bookings & Pending Handover Table -->
-      <div class="card card-static mb-8">
+      <div class="card card-static mb-8" style="border-color: var(--border-subtle);">
         <div class="flex justify-between items-center mb-4">
           <div>
-            <h3>Active Bookings & Counter Actions</h3>
+            <h3 style="color: var(--text-gold);">Active Bookings & Counter Actions</h3>
             <p class="text-xs text-muted">Customers scheduled for pickup or return at your Sadar store</p>
           </div>
           <a href="./handover.html" class="btn btn-sm btn-secondary">Open Terminal &rarr;</a>
@@ -125,18 +125,18 @@
             </thead>
             <tbody>
               <tr>
-                <td class="font-mono text-xs font-bold">JR-2026-8921</td>
+                <td class="font-mono text-xs font-bold text-gold">JR-2026-8921</td>
                 <td>
-                  <div class="font-bold text-sm">Aditya Mishra</div>
-                  <div class="text-xs text-muted">XXXX-XXXX-8921 (Jabalpur)</div>
+                  <div class="font-bold text-sm text-primary">Aditya Mishra</div>
+                  <div class="text-xs text-muted font-mono">XXXX-XXXX-8921 (Jabalpur)</div>
                 </td>
                 <td>
                   <div class="font-bold">iPhone 15 Pro Max</div>
                   <div class="text-xs text-muted">Unit #F2LX99 • 98% Health</div>
                 </td>
                 <td>Oct 28 - Oct 31 (3 Days)</td>
-                <td class="font-mono font-bold text-brand">₹3,360</td>
-                <td><span class="badge badge-warning animate-pulse-glow">PICKUP READY</span></td>
+                <td class="font-mono font-bold text-gold">₹3,360</td>
+                <td><span class="badge badge-brand animate-pulse-glow">PICKUP READY</span></td>
                 <td>
                   <a href="./handover.html?booking=JR-2026-8921" class="btn btn-primary btn-sm">
                     Verify Pickup OTP
@@ -144,18 +144,18 @@
                 </td>
               </tr>
               <tr>
-                <td class="font-mono text-xs font-bold">JR-2026-8874</td>
+                <td class="font-mono text-xs font-bold text-gold">JR-2026-8874</td>
                 <td>
-                  <div class="font-bold text-sm">Shreya Shrivastava</div>
-                  <div class="text-xs text-muted">XXXX-XXXX-4910 (Jabalpur)</div>
+                  <div class="font-bold text-sm text-primary">Shreya Shrivastava</div>
+                  <div class="text-xs text-muted font-mono">XXXX-XXXX-4910 (Jabalpur)</div>
                 </td>
                 <td>
                   <div class="font-bold">Galaxy S24 Ultra</div>
                   <div class="text-xs text-muted">Unit #R5CW11 • 99% Health</div>
                 </td>
                 <td>Oct 26 - Oct 29 (3 Days)</td>
-                <td class="font-mono font-bold text-brand">₹3,240</td>
-                <td><span class="badge badge-info">IN CUSTOMER HANDS</span></td>
+                <td class="font-mono font-bold text-gold">₹3,240</td>
+                <td><span class="badge badge-gold">IN CUSTOMER HANDS</span></td>
                 <td>
                   <a href="./handover.html?booking=JR-2026-8874&action=return" class="btn btn-secondary btn-sm">
                     Inspect & Return
@@ -168,8 +168,8 @@
       </div>
 
       <!-- Quick Action Guide for Shop Staff -->
-      <div class="card card-static" style="background: var(--bg-surface-elevated);">
-        <h4>🛡️ Jabalpur Rent Counter Protocol for Shop Staff</h4>
+      <div class="card card-static" style="background: var(--bg-surface-elevated); border-color: var(--border-gold);">
+        <h4 style="color: var(--text-gold);">🛡️ RENTANY Counter Protocol for Partner Store Staff</h4>
         <div class="grid grid-cols-3 mt-4" style="gap: 1.5rem; font-size: 0.875rem;">
           <div>
             <div class="font-bold text-brand mb-1">1. Pickup Rule</div>

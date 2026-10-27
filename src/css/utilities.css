@@ -1,5 +1,5 @@
 /* ==============================================================================
-   JABALPUR RENT — UTILITY CLASSES & MICRO-ANIMATIONS
+   RENTANY — UTILITY CLASSES & MICRO-ANIMATIONS
    ============================================================================== */
 
 /* Grid Layouts */
@@ -38,22 +38,28 @@
 .text-center { text-align: center; }
 .text-right { text-align: right; }
 .text-brand { color: var(--brand-primary); }
-.text-cyan { color: var(--brand-cyan); }
+.text-gold { color: var(--brand-gold); }
 .text-muted { color: var(--text-muted); }
 .text-sm { font-size: 0.85rem; }
 .text-xs { font-size: 0.75rem; }
+.text-lg { font-size: 1.15rem; }
+.text-xl { font-size: 1.35rem; }
 .font-bold { font-weight: 700; }
 .font-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
 
 /* Spacing Utilities */
 .mt-1 { margin-top: 0.25rem; }
 .mt-2 { margin-top: 0.5rem; }
+.mt-3 { margin-top: 0.75rem; }
 .mt-4 { margin-top: 1rem; }
 .mt-6 { margin-top: 1.5rem; }
 .mt-8 { margin-top: 2rem; }
+.mb-1 { margin-bottom: 0.25rem; }
 .mb-2 { margin-bottom: 0.5rem; }
+.mb-3 { margin-bottom: 0.75rem; }
 .mb-4 { margin-bottom: 1rem; }
 .mb-6 { margin-bottom: 1.5rem; }
+.mb-8 { margin-bottom: 2rem; }
 .py-4 { padding-top: 1rem; padding-bottom: 1rem; }
 .py-8 { padding-top: 2rem; padding-bottom: 2rem; }
 .py-12 { padding-top: 3rem; padding-bottom: 3rem; }
@@ -77,13 +83,13 @@
   animation: float 4s ease-in-out infinite;
 }
 
-/* Glassmorphism Hero Glow Box */
+/* Glassmorphism Hero Glow Sphere */
 .hero-glow-sphere {
   position: absolute;
-  width: 400px;
-  height: 400px;
+  width: 440px;
+  height: 440px;
   border-radius: 50%;
-  filter: blur(120px);
+  filter: blur(140px);
   pointer-events: none;
   z-index: 0;
 }

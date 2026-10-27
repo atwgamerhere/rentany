@@ -3,7 +3,7 @@
 // Lightweight client supporting Supabase Postgres and in-memory mock store
 // ==============================================================================
 
-import { config } from '../config/env';
+import { config } from '../config/env.ts';
 
 export interface Profile {
   id: string;

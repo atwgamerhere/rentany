@@ -13,8 +13,8 @@
 | **Phase 1** | Requirements, Architecture, Database Design & Threat Model | 🟢 **Completed & Approved** | 2026-10-27 |
 | **Phase 2** | Natural Luxury Frontend Prototype (Brand Assets, Floating Botanicals, Studio Photography) | 🟢 **Completed & Live** | 2026-10-27 |
 | **Phase 3** | Database Migrations, Auth, RLS & Private Storage | 🟢 **Completed & Verified** | 2026-10-27 |
-| **Phase 4** | Shop Approval, Phone Listings, Real Inventory & Categories | 🟡 **Active** | Phase 4 |
-| **Phase 5** | Concurrency-Safe Booking, Pricing, Deposits, Handover & Returns | ⚪ Queued | Phase 5 |
+| **Phase 4** | Shop Approval, Phone Listings, Real Inventory & Categories | 🟢 **Completed & Verified** | 2026-10-27 |
+| **Phase 5** | Concurrency-Safe Booking, Pricing, Deposits, Handover & Returns | 🟡 **Active** | Phase 5 |
 | **Phase 6** | Indian KYC Verification & Payment Gateway Sandbox Integrations | ⚪ Queued | Phase 6 |
 | **Phase 7** | Security Hardening, Automated Test Suite & Final Audit | ⚪ Queued | Phase 7 |
 

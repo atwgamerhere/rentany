@@ -3,8 +3,24 @@
 // Validates runtime environment parameters for Supabase and Payment Gateway
 // ==============================================================================
 
-import * as dotenv from 'dotenv';
-dotenv.config();
+import * as fs from 'fs';
+import * as path from 'path';
+
+// Native .env file loader for Node without external dependencies
+try {
+  const envPath = path.resolve(process.cwd(), '.env');
+  if (fs.existsSync(envPath)) {
+    const lines = fs.readFileSync(envPath, 'utf8').split('\n');
+    for (const line of lines) {
+      const match = line.match(/^\s*([\w.-]+)\s*=\s*(.*)?\s*$/);
+      if (match && !process.env[match[1]]) {
+        process.env[match[1]] = (match[2] || '').trim().replace(/^['"]|['"]$/g, '');
+      }
+    }
+  }
+} catch {
+  // Silent fallback to system process.env
+}
 
 export interface AppConfig {
   port: number;

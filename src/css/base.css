@@ -23,9 +23,12 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   background-image: 
-    radial-gradient(circle at 12% 15%, hsla(349, 70%, 41%, 0.12) 0%, transparent 45%),
-    radial-gradient(circle at 88% 22%, hsla(32, 69%, 77%, 0.09) 0%, transparent 45%),
-    radial-gradient(circle at 50% 75%, hsla(31, 69%, 14%, 0.6) 0%, transparent 60%);
+    url('../../assets/ingredient14.svg'),
+    radial-gradient(circle at 15% 10%, hsla(349, 70%, 41%, 0.16) 0%, transparent 40%),
+    radial-gradient(circle at 85% 18%, hsla(32, 69%, 77%, 0.12) 0%, transparent 42%),
+    radial-gradient(circle at 50% 65%, hsla(31, 69%, 14%, 0.55) 0%, transparent 60%);
+  background-size: 140px 80px, auto, auto, auto;
+  background-repeat: repeat, no-repeat, no-repeat, no-repeat;
   background-attachment: fixed;
 }
 
@@ -35,12 +38,17 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   color: var(--text-primary);
   line-height: 1.25;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.015em;
 }
 
-h1 { font-size: clamp(2.1rem, 5.2vw, 3.4rem); }
-h2 { font-size: clamp(1.65rem, 3.6vw, 2.35rem); }
-h3 { font-size: clamp(1.25rem, 2.5vw, 1.65rem); }
+h1, .hero-title {
+  font-family: var(--font-serif);
+  letter-spacing: 0.01em;
+}
+
+h1 { font-size: clamp(2.2rem, 5.2vw, 3.6rem); }
+h2 { font-size: clamp(1.75rem, 3.6vw, 2.45rem); }
+h3 { font-size: clamp(1.3rem, 2.5vw, 1.75rem); }
 h4 { font-size: 1.2rem; font-weight: 600; }
 h5 { font-size: 1rem; font-weight: 600; }
 

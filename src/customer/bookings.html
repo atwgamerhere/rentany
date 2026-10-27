@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Bookings & Pickup OTP — RENTANY</title>
   
+  <link rel="icon" type="image/png" href="../../assets/fl.png">
   <link rel="stylesheet" href="../css/variables.css">
   <link rel="stylesheet" href="../css/base.css">
   <link rel="stylesheet" href="../css/components.css">
@@ -15,7 +16,9 @@
   <!-- Top Demo Role Switcher -->
   <aside class="demo-role-bar">
     <div style="display: flex; align-items: center; gap: 0.6rem;">
-      <span class="badge badge-grade-a">RENTANY PHASE 2</span>
+      <span class="badge badge-gold" style="font-size: 0.72rem; padding: 0.2rem 0.6rem;">
+        <img src="../../assets/fl.png" style="height: 12px; width: auto; margin-right: 0.3rem;" alt=""> RENTANY PHASE 2
+      </span>
       <span style="color: var(--text-muted); font-size: 0.8rem;">Switch Portal View:</span>
     </div>
     <nav class="demo-role-pill-group">
@@ -29,7 +32,7 @@
   <header class="navbar">
     <div class="container nav-container">
       <a href="../../index.html" class="brand-logo">
-        <span style="color: var(--brand-primary);">⚡</span>
+        <img src="../../assets/fl.png" class="brand-crest" alt="RENTANY Royal Lotus Crest">
         <div>RENT<span class="accent">ANY</span></div>
       </a>
       <nav class="nav-links">
@@ -38,16 +41,26 @@
         <a href="./bookings.html" class="nav-link active">My Bookings</a>
       </nav>
       <div class="flex items-center gap-2">
-        <span class="badge badge-gold">Aditya Mishra (Jabalpur)</span>
+        <span class="badge badge-gold">
+          <img src="../../assets/fl.png" style="height: 12px; width: auto; margin-right: 0.2rem;" alt=""> Aditya Mishra (Jabalpur)
+        </span>
       </div>
     </div>
   </header>
 
-  <main class="py-8">
-    <div class="container" style="max-width: 960px;">
+  <main class="py-8" style="position: relative; overflow: hidden;">
+    <!-- Ambient Botanical Leaves -->
+    <img src="../../assets/ingredient1.svg" class="botanical-drift botanical-drift-1" style="top: 20px; left: -25px; opacity: 0.16;" alt="" aria-hidden="true">
+    <img src="../../assets/ingredient3.svg" class="botanical-drift botanical-drift-2" style="top: 80px; right: -25px; opacity: 0.16;" alt="" aria-hidden="true">
+
+    <div class="container" style="max-width: 960px; position: relative; z-index: 2;">
       
       <div class="flex justify-between items-center mb-6 flex-wrap gap-4">
         <div>
+          <div style="display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.2rem;">
+            <img src="../../assets/fl.png" style="height: 16px; width: auto;" alt="">
+            <span class="badge badge-gold">DIGITAL PICKUP PASS</span>
+          </div>
           <h2>My Active Rentals & Passes</h2>
           <p>Present your confidential 6-digit Pickup OTP at the store counter to collect your device.</p>
         </div>
@@ -55,29 +68,37 @@
       </div>
 
       <!-- 1. ACTIVE BOOKING: PICKUP READY WITH OTP -->
-      <div class="card mb-6" style="border-color: var(--border-gold); background: linear-gradient(180deg, var(--bg-surface) 0%, var(--bg-secondary) 100%);">
+      <div class="card mb-6" style="border-color: var(--border-gold); background: linear-gradient(180deg, var(--bg-surface) 0%, var(--bg-secondary) 100%); position: relative; overflow: hidden;">
+        <img src="../../assets/ingredient7.svg" class="card-watermark" style="width: 140px; height: 140px; top: -10px; right: -10px; opacity: 0.08;" alt="" aria-hidden="true">
         
         <div class="flex justify-between items-start flex-wrap gap-3 mb-4">
-          <div>
-            <div class="flex items-center gap-2">
-              <span class="badge badge-gold animate-pulse-glow">PICKUP READY</span>
-              <span class="text-xs text-muted font-mono">Order #JR-2026-8921</span>
+          <div style="display: flex; gap: 1.25rem; align-items: center;">
+            <img src="../../assets/phones/iphone15-pro-max.jpg" style="width: 80px; height: 80px; object-fit: cover; border-radius: var(--radius-md); border: 1px solid var(--border-gold); box-shadow: var(--shadow-sm);" alt="iPhone 15 Pro Max">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="badge badge-gold animate-pulse-glow">PICKUP READY</span>
+                <span class="text-xs text-muted font-mono">Order #JR-2026-8921</span>
+              </div>
+              <h3 style="margin-top: 0.3rem; font-size: 1.35rem; color: var(--text-gold); font-family: var(--font-serif);">Apple iPhone 15 Pro Max (256GB)</h3>
+              <p class="text-sm text-brand font-bold">📍 Apex Mobile Gallery — Sadar Bazar, Jabalpur</p>
             </div>
-            <h3 style="margin-top: 0.4rem; font-size: 1.4rem; color: var(--text-gold);">Apple iPhone 15 Pro Max (256GB)</h3>
-            <p class="text-sm text-brand font-bold">📍 Apex Mobile Gallery — Sadar Bazar, Jabalpur</p>
           </div>
           <div class="text-right">
             <span class="text-xs text-muted">Rental Dates:</span>
             <div class="font-bold text-sm text-primary">Oct 28 - Oct 31, 2026 (3 Days)</div>
-            <div class="text-xs text-gold font-mono font-bold">Total Paid: ₹7,200 (Includes ₹3,000 Deposit)</div>
+            <div class="text-xs text-gold font-mono font-bold mt-1">Total Paid: ₹7,200 (Includes ₹3,000 Deposit)</div>
           </div>
         </div>
 
-        <!-- 2-Factor Pickup OTP Card -->
-        <div class="otp-display-card">
-          <div class="badge badge-gold mb-2">CONFIDENTIAL 2-FACTOR PICKUP PASS</div>
-          <div class="text-sm text-muted">Show this 6-digit OTP to the shopkeeper at the store counter:</div>
-          <div class="otp-code-digits" id="otp-code">849 201</div>
+        <!-- 2-Factor Pickup OTP Card with Lotus Crest Watermark -->
+        <div class="otp-display-card" style="position: relative; overflow: hidden; border-color: var(--border-gold);">
+          <img src="../../assets/fl-filled.png" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); height: 160px; opacity: 0.05; pointer-events: none;" alt="" aria-hidden="true">
+          
+          <div class="badge badge-gold mb-2">
+            <img src="../../assets/fl.png" style="height: 12px; width: auto; margin-right: 0.3rem;" alt=""> CONFIDENTIAL 2-FACTOR PICKUP PASS
+          </div>
+          <div class="text-sm text-muted">Show this 6-digit OTP to the shopkeeper at the Sadar Bazar counter:</div>
+          <div class="otp-code-digits" id="otp-code" style="letter-spacing: 0.25em; text-shadow: 0 0 16px hsla(32, 69%, 77%, 0.4);">849 201</div>
           <div class="flex justify-center gap-3">
             <button class="btn btn-gold btn-sm" onclick="copyOtp()">📋 Copy OTP</button>
             <button class="btn btn-outline-gold btn-sm" onclick="showStoreDirections()">🗺️ Store Directions (Sadar)</button>
@@ -111,58 +132,41 @@
 
       </div>
 
-      <!-- 2. COMPLETED / RETURNED RENTALS LEDGER -->
-      <div style="margin-top: 3rem;">
-        <h3 style="margin-bottom: 1rem; color: var(--text-gold);">Past Rentals & Deposit Refund Receipts</h3>
-        
-        <div class="card card-static" style="border-color: var(--border-subtle);">
-          <div class="flex justify-between items-center flex-wrap gap-2 mb-3">
-            <div>
-              <span class="badge badge-gold">RETURNED & FULLY REFUNDED</span>
-              <h4 style="margin-top: 0.3rem;">Samsung Galaxy S24 Ultra (256GB Titanium)</h4>
-              <p class="text-xs text-muted">Picked up from Smart World Electronics (Gorakhpur) • Oct 20 - Oct 23</p>
-            </div>
-            <div class="text-right">
-              <span class="badge badge-outline">Invoice #INV-4901</span>
+      <!-- 2. COMPLETED RENTAL & REFUND RECEIPT -->
+      <div class="card card-static" style="border-color: var(--border-subtle); background: var(--bg-surface);">
+        <div class="flex justify-between items-start flex-wrap gap-2 mb-3">
+          <div>
+            <span class="badge badge-success">COMPLETED & REFUNDED</span>
+            <span class="text-xs text-muted font-mono ml-2">Order #JR-2026-7714</span>
+            <h4 style="margin-top: 0.3rem; font-family: var(--font-serif);">Samsung Galaxy S24 Ultra (256GB)</h4>
+            <p class="text-xs text-muted">Smart World Electronics — Gorakhpur, Jabalpur</p>
+          </div>
+          <div class="text-right">
+            <span class="text-xs text-muted">Rental: Oct 20 - Oct 23, 2026</span>
+            <div class="text-xs" style="color: var(--status-success); font-weight: 700; margin-top: 0.2rem;">
+              ✓ Deposit Refunded: ₹3,000.00
             </div>
           </div>
+        </div>
 
-          <div style="background: var(--bg-surface); padding: 0.9rem; border-radius: var(--radius-md); font-size: 0.85rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; border: 1px solid var(--border-gold);">
-            <div>
-              <span class="text-muted block text-xs">Security Deposit Settlement:</span>
-              <span class="font-bold text-gold">✓ 100% Refunded (₹3,000.00)</span>
-            </div>
-            <div>
-              <span class="text-muted block text-xs">Gateway Refund Reference:</span>
-              <span class="font-mono text-xs text-brand font-bold">rfnd_Razorpay_941029</span>
-            </div>
-            <div>
-              <button class="btn btn-secondary btn-sm" onclick="alert('Demo: Downloading GST Rental Invoice PDF...')">
-                📄 Download Receipt
-              </button>
-            </div>
-          </div>
+        <div style="background: hsla(152, 72%, 44%, 0.08); border: 1px solid hsla(152, 72%, 44%, 0.3); border-radius: var(--radius-sm); padding: 0.75rem 1rem; font-size: 0.825rem; color: var(--text-secondary);">
+          <strong>Razorpay Refund Receipt:</strong> RRN #RZP-REF-891024. Return inspection grade: <em>Zero Damage</em>. ₹3,000 security deposit was credited back to your original UPI handle on Oct 23, 2026 at 4:18 PM IST.
         </div>
       </div>
 
     </div>
   </main>
 
-  <script type="module">
-    import { showToast } from '../js/utils.js';
+  <script>
+    function copyOtp() {
+      const otp = document.getElementById('otp-code').innerText.replace(/\s+/g, '');
+      navigator.clipboard.writeText(otp).then(() => {
+        alert('Pickup OTP (849201) copied to clipboard! Present this to Rajesh Sahu at Apex Mobile Gallery, Sadar.');
+      });
+    }
 
-    window.copyOtp = () => {
-      navigator.clipboard.writeText('849201');
-      showToast('Pickup OTP copied to clipboard (849201)', 'success');
-    };
-
-    window.showStoreDirections = () => {
-      alert('Apex Mobile Gallery\nAddress: 42, Residency Road, Sadar Bazar, Jabalpur, MP\nPhone: +91 94251 88410\nLandmark: 100m from Cantt Post Office');
-    };
-
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.get('new_booking') === '1') {
-      showToast('🎉 Booking Confirmed! Your Pickup OTP is ready.', 'success');
+    function showStoreDirections() {
+      alert('Apex Mobile Gallery Location:\n42, Residency Road, Sadar Bazar, Jabalpur (Near Cantt Post Office).\nPhone: +91 94251 88410\nOpen: 10:30 AM to 9:00 PM.');
     }
   </script>
 </body>

@@ -81,8 +81,8 @@ export const MOCK_PHONES = [
     camera_highlight: "48MP ProRAW + 5x Optical Telephoto (Ideal for Bhedaghat 4K)",
     features: ["A17 Pro Chip", "USB-C 3.0 High-Speed", "Action Button", "Titanium Frame"],
     device_icon: "📱",
-    image_url: "/assets/phones/iphone15-pro-max.jpg",
-    corner_motif: "/assets/ingredient5.svg",
+    image_url: new URL('../../assets/phones/iphone15-pro-max.jpg', import.meta.url).href,
+    corner_motif: new URL('../../assets/ingredient5.svg', import.meta.url).href,
     image_gradient: "linear-gradient(135deg, #1e2638 0%, #0d131f 100%)"
   },
   {
@@ -107,8 +107,8 @@ export const MOCK_PHONES = [
     camera_highlight: "200MP Main + 100x Space Zoom (Best for Kanha Safari Wildlife)",
     features: ["Snapdragon 8 Gen 3", "Built-in S-Pen", "Galaxy AI Photo Assist", "Armor Aluminum"],
     device_icon: "📸",
-    image_url: "/assets/phones/samsung-s24-ultra.jpg",
-    corner_motif: "/assets/ingredient9.svg",
+    image_url: new URL('../../assets/phones/samsung-s24-ultra.jpg', import.meta.url).href,
+    corner_motif: new URL('../../assets/ingredient9.svg', import.meta.url).href,
     image_gradient: "linear-gradient(135deg, #252b3b 0%, #111622 100%)"
   },
   {
@@ -133,8 +133,8 @@ export const MOCK_PHONES = [
     camera_highlight: "48MP Dual Camera with 2x Telephoto + Cinematic 4K",
     features: ["Dynamic Island", "A16 Bionic", "USB-C", "All-Day Battery"],
     device_icon: "⚡",
-    image_url: "/assets/phones/iphone15.jpg",
-    corner_motif: "/assets/ingredient4.svg",
+    image_url: new URL('../../assets/phones/iphone15.jpg', import.meta.url).href,
+    corner_motif: new URL('../../assets/ingredient4.svg', import.meta.url).href,
     image_gradient: "linear-gradient(135deg, #1b2f44 0%, #0c1825 100%)"
   },
   {
@@ -159,8 +159,8 @@ export const MOCK_PHONES = [
     camera_highlight: "Google Pro Controls + Best Take & Audio Magic Eraser",
     features: ["Google Tensor G3", "Super Actua Display", "Night Sight Video", "7 Years Updates"],
     device_icon: "🎨",
-    image_url: "/assets/phones/pixel8-pro.jpg",
-    corner_motif: "/assets/ingredient10.svg",
+    image_url: new URL('../../assets/phones/pixel8-pro.jpg', import.meta.url).href,
+    corner_motif: new URL('../../assets/ingredient10.svg', import.meta.url).href,
     image_gradient: "linear-gradient(135deg, #1a3242 0%, #0d1b24 100%)"
   },
   {
@@ -185,8 +185,8 @@ export const MOCK_PHONES = [
     camera_highlight: "4th Gen Hasselblad Camera System with 3x Periscope Zoom",
     features: ["Snapdragon 8 Gen 3", "100W SUPERVOOC (Full in 26m)", "5400 mAh Battery"],
     device_icon: "🔋",
-    image_url: "/assets/phones/oneplus12.jpg",
-    corner_motif: "/assets/ingredient11.svg",
+    image_url: new URL('../../assets/phones/oneplus12.jpg', import.meta.url).href,
+    corner_motif: new URL('../../assets/ingredient11.svg', import.meta.url).href,
     image_gradient: "linear-gradient(135deg, #222222 0%, #111111 100%)"
   },
   {
@@ -211,8 +211,8 @@ export const MOCK_PHONES = [
     camera_highlight: "48MP Pro Quad Camera with Action Mode stabilization",
     features: ["Dynamic Island", "A16 Bionic", "Always-On Display", "Ceramic Shield"],
     device_icon: "🔮",
-    image_url: "/assets/phones/iphone15-pro-max.jpg",
-    corner_motif: "/assets/ingredient1.svg",
+    image_url: new URL('../../assets/phones/iphone15-pro-max.jpg', import.meta.url).href,
+    corner_motif: new URL('../../assets/ingredient1.svg', import.meta.url).href,
     image_gradient: "linear-gradient(135deg, #2b1f3d 0%, #150f1f 100%)"
   }
 ];

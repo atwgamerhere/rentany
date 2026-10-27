@@ -43,6 +43,7 @@
 ---
 
 ## 🔗 Quick Links
+- [[READING-ORDER-GUIDE]] — 📖 Step-by-step reading and audit order
 - [[Current-Phase]] — Detailed activities in Phase 1
 - [[MASTER-PLAN]] — 7-Phase master roadmap
 - [[Next-Steps]] — Immediate sequence of actions

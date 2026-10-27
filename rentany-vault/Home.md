@@ -10,10 +10,11 @@ Welcome to the central knowledge repository for **RENTANY** (`rentany.in`), the 
 
 | Document | Purpose | Status |
 | :--- | :--- | :--- |
+| [[READING-ORDER-GUIDE]] | 📖 Chronological Reading Order & Audit Sequence Guide | ⭐ Start Here |
 | [[PROJECT-STATUS]] | Real-time project heartbeat, blockers & current state | 🟢 Active |
 | [[PROJECT-OVERVIEW]] | Core vision, business model, customer & shop persona | 📘 Reference |
 | [[MASTER-PLAN]] | End-to-end 7-phase roadmap from prototype to pilot | 🗺️ Roadmap |
-| [[Current-Phase]] | Deep-dive into what is happening right now (Phase 1) | 🔨 In Progress |
+| [[Current-Phase]] | Deep-dive into what is happening right now | 🔨 Active |
 | [[Next-Steps]] | Immediate tactical actions queued up | ⏩ Queued |
 
 ---
